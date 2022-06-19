@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="styleMeme.css">
+    <title>Generador de memes</title>
+</head>
+<body id="body">
+    <!--
+        ******************************************************************************************************************************
+                                                        inicio de header
+        ******************************************************************************************************************************
+     -->
+   
+
+        <header id="header" class="headEstilo">
+            <h1 class="headerTitulo">Generador de Memes</h1>
+                <div class="headerContenedorDeBotones">
+                    <button class="buttonImg boton botonImg" id="btnImg">
+                        <i class="fa-solid fa-image headerIcono"></i>Imagen</button>
+                    <button class="buttonText boton botonTexto" id="btnText">
+                        <i class="fa-solid fa-a headerIcono"></i>Texto</button>
+                    <button class="botonModoOscuro boton" id="modoOscuro">
+                        <i class="fa-solid fa-lightbulb headerIcono"></i></i>Modo oscuro</buton>
+                    <button class="botonModoClaro boton oculto" id="modoClaro">
+                        <i class="fa-solid fa-lightbulb headerIcono"></i>Modo claro</button>
+                </div>
+        </header>
+        <!--
+        ******************************************************************************************************************************
+                                                        final de header
+        ******************************************************************************************************************************
+        -->
+
+        <section class="contenidoSeccion">
+
+        <!--
+        ******************************************************************************************************************************
+                                                        inicio de main
+        ******************************************************************************************************************************
+        -->
+
+        <main class="mainContenedor" id="main">
+            <div class="memeContenedor">
+                    <p class="textTop" id="topText">TOP TEXT</p>
+                
+                    <img id="imgMeme" class="imgMeme" src="https://t2.uc.ltmcdn.com/es/posts/5/2/0/como_hacer_que_un_gato_aprenda_su_nombre_33025_600.jpg"/>
+                  
+                    <p class="textBottom" id="bottomText">BOTTOM TEXT</p>
+            </div>
+            <button class="botonDescargar">Descargar meme</button>
+        </main>
+
+        <!--
+        ******************************************************************************************************************************
+                                                        inicio de aside
+        ******************************************************************************************************************************
+        -->
+                                           <!-- ******************************
+                                                  inicio seccion panel imagen
+                                                ****************************** -->
+      
+        <aside class="controlAside" id="aside">
+            <section  class="imagenPanel" id="panelImg">
+
+                <!--inicio url -->
+
+                    <button class="botonCerrar"><i class="fa-solid fa-xmark"></i></button>
+                <h2 class="tituloPanelImagen">IMAGEN</h2>
+                <div class="panelUrlImagen">
+                    <p class="urlTextoImagen">URL</p>
+                    <input class="panelInputImagen" id="panelInputImagen" type="text">
+                </div>
+                                     <!--final url-->
+
+                                     <!--inicio seccion color de fondo-->
+
+                <div class="colorDeFondo">
+                    <p class="fondoTitulo" id="btnColorDeFondo">FONDO</p>
+                    <div class="fondoBotones" id="btnsFondo">
+                        <div class="btnColorFondo" id="elegirColorFondo">
+                            <span class="tituloFondo">
+                                <input type="color" class="FondoInput" id="colorFondoInput">
+                            </span>
+                            </div>
+                            <div class="modoSelector">
+                                <select id="modoFondo" class="modoColorFondo">
+                                    <option>Ninguno</option>
+                                    <option>Aclarar</option>
+                                    <option>Oscurecer</option>
+                                    <option>Diferencia</option>
+                                    <option>Luminosidad</option>
+                                    <option>Multiplicar</option>
+                                </select>
+                            </div>
+                    </div>
+                </div>
+
+                                       <!--inicio filtros-->
+
+                <section class="selectorDeFiltro" id="seccionFiltros">
+                    <p class="tituloFiltros">FILTROS</p>
+                    <div>
+                        <label id="levelbrillo">BRILLO</label>
+                        <input id="inputBrillo" type="range" min="0" max="1" step="0.1" value="1">
+                    </div>
+                    <div>
+                        <label id="levelOpacidad">OPACIDAD</label>
+                        <input id="inputOpacidad" type="range" min="0" max="1" step="0.1" value="1">
+                    </div>
+                    <div>
+                        <label id="levelContraste">CONTRASTE</label>
+                        <input id="inputContraste" type="range" min="100" max="1000" step="1" value="100">
+                    </div>
+                    <div>
+                        <label id="levelDesenfoque">DESENFOQUE</label>
+                        <input id="inputDesenfoque" type="range" min="0px" max="10px" step="0.1px" value="0px">
+                    </div>
+                    <div>
+                        <label id="levelEscala">ESCALA DE GRISES</label>
+                        <input id="inputEscala" type="range" min="0%" max="100%" step="1%" value="0%">
+                    </div>
+                    <div>
+                        <label id="levelSepia">SEPIA</label>
+                        <input id="inputSepia" type="range" min="0%" max="100%" step="1%" value="0%">
+                    </div>
+                    <div>
+                        <label id="levelHUE">HUE</label>
+                        <input id="inputHUE" type="range" min="0deg" max="359deg" step="1deg" value="0deg">
+                    </div>
+                    <div>
+                        <label id="levelSaturado">SATURADO</label>
+                        <input id="inputSaturado" type="range" min="100%" max="1000%" step="10%" value="100%">
+                    </div>
+                    <div>
+                        <label id="levelNegativo">NEGATIVO</label>
+                        <input id="inputNegativo" type="range" min="0" max="1" step="0.1" value="0">
+                    </div>
+                </section>
+
+                <button class="reestablecerFiltros">Reestablecer filtros</button>
+
+                                 <!--final filtros-->
+
+            </section>    
+                                <!-- *****************************
+                                       final seccion panel imagen
+                                     *****************************-->
+
+                                <!-- ****************************
+                                      inicio seccion panel texto
+                                     **************************** -->
+
+                                           <!--TEXTO-->
+
+            <section class= "seccionPanelTexto oculto" id="panelText">
+                <h2 class="panelTextTitulo">TEXTO</h2>
+                <div class="panelControlTexto">
+                    <h3 class="panelControlTitulo">SUPERIOR</h3>
+                    <input aria-label="Texto Superior" class="textareaImput" id="textareaTopText"/>
+                        <span id="spanTopText">
+                            TOP TEXT
+                        </span>
+                    <div class="sinTexto">
+                        <input type="checkbox" class="cajaSelectora" id="sinCajaTopText">
+                        <label for="seleccionarSinCajaTopText">
+                            Sin texto superior
+                        </label>
+                    </div>
+                </div>  
+                <div class="panelControlTexto">
+                    <h3 class="panelControlTitulo">INFERIOR</h3>
+                    <input aria-label="Texto Inferior" class="textareaImput" id="textareaBottomText"/>
+                    <span id="spanBottomText">
+                        BOTTOM TEXT
+                    </span>
+                    <div class="sinTexto">
+                        <input type="checkbox" class="cajaSelectora" id="sinCajaBottomText">
+                        <label for="seleccionarSinCajaBottomText">
+                            Sin texto inferior
+                        </label>
+                    </div>
+                </div>           
+                                            <!--FUENTE-->
+
+                <div class="panelControlTexto">
+                    <h3 class="panelControlTitulo">FUENTE</h3>
+
+                                            <!--Tipo de fuente-->
+
+                    <select name="Tipo de fuente" id="tipoDeFuente" class="panelFuenteInput" aria-label="Tipo de fuente">
+                        <option value="Arial">Arial</option>
+                        <option value="Arial Black">Arial Black</option>
+                        <option value="American Typewriter">American Typewriter</option>
+                        <option value="Andale Mono">Andale Mono</option>
+                        <option value="Comic Sans MS">Comic Sans MS</option>
+                        <option value="Helvetica">Helvetica</option>
+                        <option value="Impact" selected>Impact</option>
+                        <option value="Verdana">Verdana</option>
+                        <option value="Times New Roman">Times New Roman</option>
+                    </select>
+
+                                               <!--Tamaño-->
+
+                    <div class="panelControlTexto">
+                        <input type="number" name="Tamaño de fuente" aria-label="Tamaño de fuente" class="controlTamañoInput" id="TamañoInput" min="12" value="40" />
+                 
+                                                <!--Alineacion-->
+                        <div class="panelAlineamiento">
+                            <button class="btnLado" id="alineacionIzquierda"
+                                aria-label="Alinear texto a la izquierda"><i class="fas fa-align-left" aria-hidden="true"></i>
+                            </button>
+                            <button class="btnLado" id="alinacionCentro"
+                                aria-label="Alinear texto al centro"><i class="fas fa-align-center" aria-hidden="true"></i>
+                            </button>
+                            <button class="btnLado" id="alineacionDerecha"
+                                aria-label="Alinear texto a la derecha"><i class="fas fa-align-right" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                                                <!--COLOR-->
+
+                <div class="panelControlTexto">
+                    <div class="panelColorTexto">
+                                                <!--color texto-->
+                        <div class="colorTexto">
+                            <h3 class="panelColorTitulo">COLOR</h3>
+                            <div class="controlTextoColor">
+                                <input name="Color de texto" type="color" id="textoColorInput" value="#000000" aria-label="Color de texto" />
+                                <span id="spanTextoColor" aria-hidden="true">#000000</span>
+                            </div>
+                        </div>
+
+                                               <!--color fondo-->
+
+                    <div class="panelColorFondoTexto">
+                        <h3 class="panelColorTitulo">Fondo</h3>
+                        <div class="controlTextoColorFondo">
+                            <input name="Color de fondo del texto" type="color" id="backgroundColorInput" value="#FFFFFF" aria-label="Color de fondo del texto" />
+                            <span id="spanTextoColorFondo" aria-hidden="true">#FFFFFF</span>
+                        </div>
+                        <div class="cajaSelectora">
+                            <input type="checkbox" id="sinColorFondoTexto">
+                            <label for="sinColorDeFondoDeTexto">
+                                Fondo transparente
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                                              <!--CONTORNO-->
+
+                <div class="panelControlTexto">
+                    <h3 class="panelColorTitulo">CONTORNO</h3>
+                    <div class="btnsContorno">
+                        <button class="btnContorno" id="sinContorno">Ninguno</button>
+                        <button class="btnContorno" id="contornoClaro">Claro</button>
+                        <button class="btnContorno" id="contornoOscuro">Oscuro</button>
+                    </div>
+                </div>   
+
+                                               <!--PADING-->
+
+                <div class="panelControlTexto">
+                    <h3 class="panelColorTitulo">ESPACIADO</h3>
+                    <input type="number" id="espacioInput" class="espacioInput" aria-label="Espaciado" min="10" max="50" value="35">
+                </div>
+            
+           
+                                                <!--ALTO DE LINEA-->
+               
+                <div class="panelControlTexto">
+                    <h3 class="panelColorTitulo">INTERLINEADO</h3>
+                    <select id="interlineadoInput" class="interlineadoInput" aria-label="Interlineado">
+                        <option value="0.8">0.8</option>
+                        <option value="1">1</option>
+                        <option value="1.2" selected>1.2</option>
+                        <option value="1.5">1.5</option>
+                        <option value="2">2</option>
+                        <option value="2.5">2.5</option>
+                    </select>
+                </div>
+            </section>
+        </aside>
+    </section>
+
+    <script src="./script.js"></script>
+
+</body>
+</html>

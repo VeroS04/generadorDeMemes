@@ -1,0 +1,267 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+    /* overflow: hidden; */
+}
+
+  /* ************************************************************************************************
+                                            INICIO HEDER
+     ************************************************************************************************ */
+
+
+
+.headEstilo {
+    height: 5em;
+    font-size: 1.5em;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 1.5%;
+    color: #e3f8e3;
+    background-color: #191E2B;
+}
+
+.headerTitulo {
+    font-size: 1.3em;
+}
+
+
+.headerContenedorDeBotones {
+    width: 35%;
+    margin: auto;
+}
+
+.boton {
+    font-size: 0.7em;
+    background-color: #191E2B;
+    color: #e3f8e3;
+    padding: 1%;
+    border: none;
+    border-radius: 0.5em;
+    height: 6vh;
+}
+
+.botonImg {
+    width: 15%;
+}
+
+.botonTexto {
+    width: 12%;
+}
+
+.botonModoOscuro, .botonModoClaro {
+    width: 23%;
+}
+
+.headerIcono {
+    width: 20%;
+    margin-right: 3%;
+}
+
+.oculto {
+    display: none;
+}
+
+.boton:hover, .boton:focus {
+    background-color: #2c3344;
+}
+
+
+  /* ************************************************************************************************
+                                            FINAL HEDER
+     ************************************************************************************************ */
+
+     
+  /* ************************************************************************************************
+                                            INICIO MAIN
+     ************************************************************************************************ */
+
+
+.contenidoSeccion {
+        flex-grow: 1;
+}
+
+.mainContenedor {
+    background-color: #2d3443;
+    color: rgb(227, 248, 227);
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5% 0%;
+}
+
+.memeContenedor {
+    background-color: #191E2B;
+    width: 30%;
+    position: relative;
+}
+
+.textTop {
+    margin: auto;
+    position: absolute;
+    width: 100%;
+    padding: 1%;
+    font-size: 2em;
+    height: 10vh;
+    background-color: aliceblue;
+    color: #191E2B;
+    display: inline-block;
+}
+
+.textBottom{
+    margin: auto;
+    position: absolute;
+    right: 0%;
+    top: 82.9%;
+    width: 100%;
+    padding: 1%;
+    font-size: 2em;
+    height: 10vh;
+    background-color: aliceblue;
+    color: #191E2B;
+    display: inline-block;
+}
+
+.memeContenido {
+    flex-grow: 1;
+    height: 45vh;
+}
+
+.imgMeme {
+    width: 100%;
+    height: 100%;
+}
+
+  /* ************************************************************************************************
+                                            INICIO PANEL IMAGEN
+     ************************************************************************************************ */
+
+.imagenPanel {
+    width: 14%;
+    position: absolute;
+    right: 00%;
+    top: 00%;
+    padding: 1%;
+    background-color: #272e3f;
+    color: #e3f8e3;
+}
+
+.botonCerrar {
+    position: relative;
+    left: 95%;
+    top: auto;
+    font-size: 1em;
+    width: 5%;
+    background-color: #272e3f;
+    color: #e3f8e3;
+    border: none;
+    display: none; 
+}
+
+.tituloPanelImagen {
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.panelUrlImagen{
+    margin-top: 7%;
+    font-size: 0.85em;
+}
+
+.panelInputImagen{
+    background-color: #394052;
+    width: 100%;
+    height: 4vh;
+    border: none;
+    border-radius: 0.3em;
+    margin-top: 5%;
+}
+
+.panelInputImagen:hover {
+    background-color: #464d5f;
+}
+
+.colorDeFondo {
+    font-size: 0.8em;
+    margin-top: 5%;
+}
+
+.fondoBotones {
+    display: flex;
+    margin-top: 5%;
+    height: 4vh;
+}
+
+.btnColorFondo {
+    background-color: #394052;
+    width: 45%;
+    margin-right: 10%;
+    border-radius: 0.5em;
+    border: none;
+}
+
+.btnColorFondo:focus {
+    background-color: #464d5f;
+}
+
+.FondoInput {
+    width: 30%;
+    border-radius: 50%;
+}
+
+.modoSelector {
+    width: 45%;
+}
+.modoColorFondo {
+    width: 100%;
+    height: 100%;
+    border-radius: 0.5em;
+    border: none;
+    background-color: #394052;
+    color: #e3f8e3;
+}
+.modoColorFondo:hover {
+    background-color: #464d5f;
+}
+
+.selectorDeFiltro{
+    background-color: aquamarine;
+    font-size: 0.8em;
+    margin-top: 5%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.seccionPanelTexto {
+    width: 14%;
+    position: absolute;
+    right: 00%;
+    top: 00%;
+    padding: 1%;
+    background-color: #272e3f;
+    color: rgb(227, 248, 227);
+}
