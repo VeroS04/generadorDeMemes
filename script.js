@@ -93,10 +93,6 @@ btnText.addEventListener('click', () => {
     panelImg.classList.add('oculto');
 })
 
-// panelInputImagen.addEventListener('input', () => {
-//   const memeInput = panelInputImagen.value
-//   imgMeme.innerHTML = `src= "${memeInput.value}"`
-// })
 
 // levelContraste.addEventListener('input', (event) => {
 //   const valorContraste = event.target.value;
@@ -136,8 +132,34 @@ btnText.addEventListener('click', () => {
 
 textareaTopText.addEventListener('input', () => {
   topText.innerHTML = textareaTopText.value;
+
 });
 
 textareaBottomText.addEventListener('input', () => {
   bottomText.innerHTML = textareaBottomText.value;
 });
+
+
+panelInputImagen.addEventListener('input', () =>{
+  imgMeme.src = panelInputImagen.value;
+})
+
+inputBrillo.addEventListener('input', () =>{
+  imgMeme.style.filter = `brightness(${inputBrillo.value * 100}%)`
+})
+
+inputOpacidad.addEventListener('input', () =>{
+  imgMeme.style.opacity = inputOpacidad.value;
+})
+
+
+inputContraste.addEventListener('input', () =>{
+  imgMeme.style.filter = `contrast(${inputContraste.value * 100}%)`;
+})
+
+// inputDesenfoque.addEventListener('input', () =>{
+// imgMeme.style.filter = ('blur');
+  
+// })
+
+//inputEscala.addEventListener()

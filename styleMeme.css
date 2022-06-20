@@ -102,34 +102,41 @@
 
 .memeContenedor {
     background-color: #191E2B;
-    width: 30%;
+    width: 35%;
     position: relative;
+    display: flex;
+    flex-direction: column;
 }
 
 .textTop {
     margin: auto;
-    position: absolute;
+    position: static;
     width: 100%;
-    padding: 1%;
-    font-size: 2em;
+    font-size: 2.5em;
+    font-weight: bold;
     height: 10vh;
     background-color: aliceblue;
     color: #191E2B;
-    display: inline-block;
+    /* display: inline-block; */
+    padding: 21px 50px;
+    
 }
 
 .textBottom{
     margin: auto;
-    position: absolute;
+    position: static;
     right: 0%;
     top: 82.9%;
     width: 100%;
-    padding: 1%;
-    font-size: 2em;
+    /* padding: 1%; */
+    font-size: 2.5em;
+    font-weight: bold;
     height: 10vh;
     background-color: aliceblue;
     color: #191E2B;
-    display: inline-block;
+    /* display: inline-block; */
+    padding: 21px 50px;
+    
 }
 
 .memeContenido {
@@ -140,6 +147,14 @@
 .imgMeme {
     width: 100%;
     height: 100%;
+}
+.botonDescargar{
+    margin-top: 1.8em;
+    padding: 15px 15px;
+    height: auto;
+    background-color: #2e7d32;
+    color: white;
+    
 }
 
   /* ************************************************************************************************
