@@ -20,8 +20,8 @@ const textareaTopText = document.getElementById('textareaTopText');
 const textareaBottomText = document.getElementById('textareaBottomText');
 const topText = document.getElementById('topText');
 const bottomText = document.getElementById('bottomText');
-const sinCajaTopText = document.getElementById('sinCajaTopText');
-const sinCajaBottomText = document.getElementById('sinCajaBottomText');
+const cajaSinTopText = document.getElementById('sinCajaTopText');
+const cajaSinBottomText = document.getElementById('sinCajaBottomText');
 const inputBrillo = document.getElementById('inputBrillo');
 const inputOpacidad = document.getElementById('inputOpacidad');
 const inputContraste = document.getElementById('inputContraste');
@@ -134,13 +134,17 @@ panelInputImagen.addEventListener('input', () =>{
   imgMeme.src = panelInputImagen.value;
 })
 
+// colorFondoInput.addEventListener('change', () => {
+//   imgMeme.style.backgroundColor = colorFondoInput.value;
+// })
+// console.log(colorFondoInput.value)
 
 inputBrillo.addEventListener('input', () =>{
   imgMeme.style.filter = `brightness(${inputBrillo.value})`
 })
 
 inputOpacidad.addEventListener('input', () =>{
-  imgMeme.style.opacity = inputOpacidad.value;
+  imgMeme.style.filter = `opacity(${inputOpacidad.value})`;
 })
 
 inputContraste.addEventListener('input', () =>{
@@ -185,3 +189,25 @@ textareaTopText.addEventListener('input', () => {
 textareaBottomText.addEventListener('input', () => {
   bottomText.innerHTML = textareaBottomText.value;
 });
+
+// cajaSinTopText.addEventListener('checked', () => {
+//   topText.classList.add('oculto')
+// })
+
+// const tamañoInput = document.getElementById('tamañoInput');
+
+// tamañoInput.addEventListener('change', () => {
+//   topText.style.fontSize = `${tamañoInput.value}px`;
+// });
+
+const actualizarTamanioTexto = () => {
+  topText.fontSize = `${tamañoInput.value}px`
+  bottomText.fontSize = `${tamañoInput.value}px"`
+}
+
+
+const actualizarFuente = () => {
+  const fuente = document.getElementById8('tipoDeFuente')
+  topText.style.fontFamily = fuente.value
+  bottomText.style.fontFamily = fuente.value
+}

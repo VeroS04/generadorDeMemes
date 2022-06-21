@@ -99,51 +99,32 @@
 .memeContenedor {
     background-color: #191E2B;
     width: 35%;
-    height: 67.8vh;
-    position: relative;
+    height: 50vh;
     display: flex;
     flex-direction: column;
 }
 
-.textTop {
-    position: absolute;
-    top: 0%;
-    width: 100%;
+.textTop, .textBottom {
     font-size: 2.5em;
     text-align: center;
-    padding-top: 3%;
+    padding: 3% 0%;
     font-weight: bold;
-    height: 10vh;
     background-color: aliceblue;
     color: #191E2B;   
 }
 
-.textBottom{
-    position: absolute;
-    right: 0%;
-    bottom: 0%;
-    width: 100%;
-    text-align: center;
-    padding-top: 3%;
-    font-size: 2.5em;
-    font-weight: bold;
-    height: 10vh;
-    background-color: aliceblue;
-    color: #191E2B;
-}
-
 .memeContenido {
     height: 100%;
-   
 }
 
 .imgMeme {
     width: 100%;
     height: 100%;
+    background-blend-mode: lighten;
 }
 .botonDescargar{
-    margin-top: 1.8em;
     padding: 15px;
+    margin-top: 10%;
     background-color: #2e7d32;
     color: white;
     border: none;
@@ -332,4 +313,43 @@
 .sinTexto {
     font-size: 0.8em;
     margin: 5% 0%;
+}
+
+.panelFuenteInput {
+    background-color: #394052;
+    color: #e3f8e3;
+    margin-top: 3%;
+    width: 100%;
+    padding: 6%;
+    border-radius: 3px;
+    border: none;
+}
+
+.panelControlTextoTamaño {
+    display: flex;
+    margin-top: 3%;
+}
+
+.panelAlineamiento {
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.controlTamañoInput {
+    background-color: #394052;
+    color: #e3f8e3;
+    width: 50%;
+    padding: 0% 2%;
+    border-radius: 3px;
+    border: none;
+}
+
+.btnLado {
+    background-color: #394052;
+    color: #e3f8e3;
+    width: 25%;
+    padding: 8%;
+    border-radius: 3px;
+    border: none;
 }

@@ -88,12 +88,12 @@
                         </div>
                         <div class="modoSelector" id="eleccionDeModo">
                             <select id="modoFondo" class="modoColorFondo">
-                                <option id="opcionNinguno">Ninguno</option>
-                                <option id="opcionAclarar">Aclarar</option>
-                                <option id="opcionOscurecer">Oscurecer</option>
-                                <option id="opcionDiferencia">Diferencia</option>
-                                <option id="opcionLuminosidad">Luminosidad</option>
-                                <option id="opcionMultiplicar">Multiplicar</option>
+                                <option value="unset">Ninguno</option>
+                                <option value="lighten">Aclarar</option>
+                                <option value="darken">Oscurecer</option>
+                                <option value="difference">Diferencia</option>
+                                <option value="luminosity">Luminosidad</option>
+                                <option value="multiply">Multiplicar</option>
                             </select>
                         </div>
                     </div>
@@ -161,10 +161,10 @@
                 <div class="panelControlTexto">
                     <h3 class="panelControlTextTitulo">SUPERIOR</h3>
                     <input aria-label="Texto Superior" class="textareaImput" id="textareaTopText" placeholder="TOP TEXT" rows="1"/>
-                    <div class="sinTexto">
-                        <input type="checkbox" class="cajaSelectora" id="sinCajaTopText">
-                        <label for="seleccionarSinCajaTopText" class="lebelCajaSelectora">
-                            Sin texto superior
+                    <div class="sinTexto">  
+                        <label for="cajaSinTopText" class="lebelCajaSelectora">
+                            <input type="checkbox" class="cajaSelectora" id="cajaSinTopText" value="true">
+                                Sin texto superior
                         </label>
                     </div>
                 </div>  
@@ -172,19 +172,17 @@
                     <h3 class="panelControlTextTitulo">INFERIOR</h3>
                     <input aria-label="Texto Inferior" class="textareaImput" id="textareaBottomText" placeholder="TOP BOTTOM" rows="1"/>
                     <div class="sinTexto">
-                        <input type="checkbox" class="cajaSelectora" id="sinCajaBottomText">
-                        <label for="seleccionarSinCajaBottomText" class="lebelCajaSelectora">
-                            Sin texto inferior
+                        <label for="cajaSinBottomText" class="lebelCajaSelectora">
+                            <input type="checkbox" class="cajaSelectora" id="cajaSinBottomText" value="true">
+                                Sin texto inferior
                         </label>
                     </div>
                 </div>           
                                             <!--FUENTE-->
 
-                <div class="panelControlTexto">
-                    <h3 class="panelControlTextTitulo">FUENTE</h3>
-
-                                            <!--Tipo de fuente-->
-
+                <div class="panelControlTextoFuente">
+                                     <!--Tipo de fuente-->  
+                    <h3 class="panelControlTextTitulo">FUENTE</h3>                      
                     <select name="Tipo de fuente" id="tipoDeFuente" class="panelFuenteInput" aria-label="Tipo de fuente">
                         <option value="Arial">Arial</option>
                         <option value="Arial Black">Arial Black</option>
@@ -199,7 +197,7 @@
 
                                                <!--Tamaño-->
 
-                    <div class="panelControlTexto">
+                    <div class="panelControlTextoTamaño">
                         <input type="number" name="Tamaño de fuente" aria-label="Tamaño de fuente" class="controlTamañoInput" id="TamañoInput" min="12" value="40" />
                  
                                                 <!--Alineacion-->
