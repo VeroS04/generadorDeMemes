@@ -47,9 +47,9 @@
         <main class="mainContenedor" id="main">
             <div class="memeContenedor">
                     <p class="textTop" id="topText">TOP TEXT</p>
-                
+                <div class="imgDiv">
                     <img id="imgMeme" class="imgMeme"/>
-                  
+                </div>  
                     <p class="textBottom" id="bottomText">BOTTOM TEXT</p>
             </div>
             <button class="botonDescargar"><i class="fas fa-download button-icon-text" aria-hidden="true"></i>Descargar meme</button>
@@ -161,10 +161,10 @@
                 <div class="panelControlTexto">
                     <h3 class="panelControlTextTitulo">SUPERIOR</h3>
                     <input aria-label="Texto Superior" class="textareaImput" id="textareaTopText" placeholder="TOP TEXT" rows="1"/>
-                    <div class="sinTexto">  
+                    <div class="sinTexto">
                         <label for="cajaSinTopText" class="lebelCajaSelectora">
-                            <input type="checkbox" class="cajaSelectora" id="cajaSinTopText" value="true">
-                                Sin texto superior
+                            <input type="checkbox" class="cajaSelectora" id="cajaSinTopText" name="cajaSinTopText"/>
+                            Sin texto superior
                         </label>
                     </div>
                 </div>  
@@ -173,8 +173,8 @@
                     <input aria-label="Texto Inferior" class="textareaImput" id="textareaBottomText" placeholder="TOP BOTTOM" rows="1"/>
                     <div class="sinTexto">
                         <label for="cajaSinBottomText" class="lebelCajaSelectora">
-                            <input type="checkbox" class="cajaSelectora" id="cajaSinBottomText" value="true">
-                                Sin texto inferior
+                            <input type="checkbox" class="cajaSelectora" id="cajaSinBottomText" name="cajaSinBottomText"/>
+                            Sin texto inferior
                         </label>
                     </div>
                 </div>           

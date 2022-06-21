@@ -96,22 +96,24 @@
     padding: 3% 0%;
 }
 
-.memeContenedor {
+/* .memeContenedor {
     background-color: #191E2B;
     width: 35%;
     height: 60vh;
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
 }
 
 .textTop, .textBottom {
     font-size: 2.5em;
-    text-align: center;
     padding: 3% 0%;
     font-weight: bold;
     background-color: aliceblue;
     color: #191E2B; 
-    height: 15%;  
+    height: 20%;
+    margin: 0%;
+    text-align: center; 
 }
 
 .memeContenido {
@@ -121,10 +123,42 @@
 .imgMeme {
     width: 100%;
     height: 50vh;
+} */
+
+.memeContenedor {
+    width: 30%;
+    background-color: #191E2B;
+    margin: 2%;
+    height: 60.2vh;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
 }
+
+.textTop, .textBottom {
+    background-color: white;
+    color: #191E2B;
+    height: 20%;
+    margin: 0%;
+    text-align: center;
+    font-size: 2.5em;
+    padding: 3% 0%;
+    font-weight: bold;
+}
+
+.imgDiv {
+    flex-grow: 2;
+}
+
+.imgMeme {
+    width: 100%;
+    height: 100%;
+}
+
 .botonDescargar{
     padding: 15px;
-    margin-top: 5.1%;
+    margin-top: 1%;
     background-color: #2e7d32;
     color: white;
     border: none;

@@ -20,8 +20,8 @@ const textareaTopText = document.getElementById('textareaTopText');
 const textareaBottomText = document.getElementById('textareaBottomText');
 const topText = document.getElementById('topText');
 const bottomText = document.getElementById('bottomText');
-const cajaSinTopText = document.getElementById('sinCajaTopText');
-const cajaSinBottomText = document.getElementById('sinCajaBottomText');
+const cajaSinTopText = document.getElementById('cajaSinTopText');
+const cajaSinBottomText = document.getElementById('cajaSinBottomText');
 const inputBrillo = document.getElementById('inputBrillo');
 const inputOpacidad = document.getElementById('inputOpacidad');
 const inputContraste = document.getElementById('inputContraste');
@@ -31,15 +31,6 @@ const inputSepia = document.getElementById('inputSepia');
 const inputHUE = document.getElementById('inputHUE');
 const inputSaturado = document.getElementById('inputSaturado');
 const inputNegativo = document.getElementById('inputNegativo');
-const levelBrillo = document.getElementById('levelBrillo');
-const levelOpacidad = document.getElementById('levelOpacidad');
-const levelContraste = document.getElementById('levelContraste');
-const levelDesenfoque = document.getElementById('levelDesenfoque');
-const levelEscala = document.getElementById('levelEscala');
-const levelSepia = document.getElementById('levelSepia');
-const levelHUE = document.getElementById('levelHUE');
-const levelSaturado = document.getElementById('levelSaturado');
-const levelNegativo = document.getElementById('levelNegativo');
 const opcionNinguno = document.getElementById('opcionNinguno');
 const opcionAclarar = document.getElementById('opcionNinguno');
 const opcionOscurecer = document.getElementById('opcionOscurecer');
@@ -132,20 +123,21 @@ btnText.addEventListener('click', () => {
 
 panelInputImagen.addEventListener('input', () =>{
   imgMeme.src = panelInputImagen.value;
-})
+});
 
-// colorFondoInput.addEventListener('change', () => {
-//   imgMeme.style.backgroundColor = colorFondoInput.value;
-// })
-// console.log(colorFondoInput.value)
+function updateAll(event) {
+  document.querySelectorAll("imgMeme").forEach(function(imgMeme) {
+    imgMeme.style.backgrounColor = event.target.value;
+  });
+}
 
 inputBrillo.addEventListener('input', () =>{
   imgMeme.style.filter = `brightness(${inputBrillo.value})`
-})
+});
 
 inputOpacidad.addEventListener('input', () =>{
   imgMeme.style.filter = `opacity(${inputOpacidad.value})`;
-})
+});
 
 inputContraste.addEventListener('input', () =>{
   imgMeme.style.filter = `contrast(${inputContraste.value * 100}%)`;
@@ -181,7 +173,6 @@ inputNegativo.addEventListener('input', () =>{
                                    //************inicio seccion panel texto************
 
 
-
 textareaTopText.addEventListener('input', () => {
   topText.innerHTML = textareaTopText.value;
 });
@@ -190,15 +181,21 @@ textareaBottomText.addEventListener('input', () => {
   bottomText.innerHTML = textareaBottomText.value;
 });
 
-// cajaSinTopText.addEventListener('checked', () => {
-//   topText.classList.add('oculto')
-// })
+cajaSinTopText.addEventListener('input', () => {
+  if(cajaSinTopText.checked) {
+      topText.style.display = 'none';
+    } else {
+      topText.style.display = 'block';
+    }
+})
 
-// const tamañoInput = document.getElementById('tamañoInput');
-
-// tamañoInput.addEventListener('change', () => {
-//   topText.style.fontSize = `${tamañoInput.value}px`;
-// });
+cajaSinBottomText.addEventListener('input', () => {
+  if(cajaSinBottomText.checked) {
+      bottomText.style.display = 'none';
+    } else {
+      bottomText.style.display = 'block';
+    }
+})
 
 const actualizarTamanioTexto = () => {
   topText.fontSize = `${tamañoInput.value}px`
