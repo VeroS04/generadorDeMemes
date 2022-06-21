@@ -83,20 +83,19 @@
                     <p class="fondoTitulo" id="btnColorDeFondo">FONDO</p>
                     <div class="fondoBotones" id="btnsFondo">
                         <div class="btnColorFondo" id="elegirColorFondo">
-                            <span class="tituloFondo">
-                                <input type="color" class="FondoInput" id="colorFondoInput">
-                            </span>
-                            </div>
-                            <div class="modoSelector">
-                                <select id="modoFondo" class="modoColorFondo">
-                                    <option>Ninguno</option>
-                                    <option>Aclarar</option>
-                                    <option>Oscurecer</option>
-                                    <option>Diferencia</option>
-                                    <option>Luminosidad</option>
-                                    <option>Multiplicar</option>
-                                </select>
-                            </div>
+                            <input type="color" class="FondoInput" id="colorFondoInput" value="#FFFFFF">
+                            <span class="spanFondo">#FFFFFF</span>
+                        </div>
+                        <div class="modoSelector" id="eleccionDeModo">
+                            <select id="modoFondo" class="modoColorFondo">
+                                <option id="opcionNinguno">Ninguno</option>
+                                <option id="opcionAclarar">Aclarar</option>
+                                <option id="opcionOscurecer">Oscurecer</option>
+                                <option id="opcionDiferencia">Diferencia</option>
+                                <option id="opcionLuminosidad">Luminosidad</option>
+                                <option id="opcionMultiplicar">Multiplicar</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
 
@@ -104,45 +103,45 @@
 
                 <section class="selectorDeFiltro" id="seccionFiltros">
                     <p class="tituloFiltros">FILTROS</p>
-                    <div>
+                    <div class="valoresDeContrastes">
                         <label id="levelbrillo">BRILLO</label>
-                        <input id="inputBrillo" type="range" min="0" max="1" step="0.1" value="1">
+                        <input id="inputBrillo" class="inputContrastes" type="range" min="0" max="1" step="0.1" value="1">
                     </div>
-                    <div>
+                    <div class="valoresDeContrastes">
                         <label id="levelOpacidad">OPACIDAD</label>
-                        <input id="inputOpacidad" type="range" min="0" max="1" step="0.1" value="1">
+                        <input id="inputOpacidad" class="inputContrastes" type="range" min="0" max="1" step="0.1" value="1">
                     </div>
-                    <div>
+                    <div class="valoresDeContrastes">
                         <label id="levelContraste">CONTRASTE</label>
-                        <input id="inputContraste" type="range" min="0" max="1" step="0.1" value="1">
+                        <input id="inputContraste" class="inputContrastes" type="range" min="0" max="1" step="0.1" value="1">
                     </div>
-                    <div>
+                    <div class="valoresDeContrastes">
                         <label id="levelDesenfoque">DESENFOQUE</label>
-                        <input id="inputDesenfoque" type="range" min="0px" max="10px" step="0.1px" value="0px">
+                        <input id="inputDesenfoque" class="inputContrastes" type="range" min="0" max="10" step="0.1" value="0">
                     </div>
-                    <div>
+                    <div class="valoresDeContrastes">
                         <label id="levelEscala">ESCALA DE GRISES</label>
-                        <input id="inputEscala" type="range" min="0%" max="100%" step="1%" value="0%">
+                        <input id="inputEscala" class="inputContrastes" type="range" min="0" max="100" step="1" value="0">
                     </div>
-                    <div>
+                    <div class="valoresDeContrastes">
                         <label id="levelSepia">SEPIA</label>
-                        <input id="inputSepia" type="range" min="0%" max="100%" step="1%" value="0%">
+                        <input id="inputSepia" class="inputContrastes" type="range" min="0" max="100" step="1" value="0">
                     </div>
-                    <div>
+                    <div class="valoresDeContrastes">
                         <label id="levelHUE">HUE</label>
-                        <input id="inputHUE" type="range" min="0deg" max="359deg" step="1deg" value="0deg">
+                        <input id="inputHUE" class="inputContrastes" type="range" min="0" max="359" step="1" value="0">
                     </div>
-                    <div>
+                    <div class="valoresDeContrastes">
                         <label id="levelSaturado">SATURADO</label>
-                        <input id="inputSaturado" type="range" min="100%" max="1000%" step="10%" value="100%">
+                        <input id="inputSaturado" class="inputContrastes" type="range" min="100" max="1000" step="10" value="100">
                     </div>
-                    <div>
+                    <div class="valoresDeContrastes">
                         <label id="levelNegativo">NEGATIVO</label>
-                        <input id="inputNegativo" type="range" min="0" max="1" step="0.1" value="0">
+                        <input id="inputNegativo" class="inputContrastes" type="range" min="0" max="1" step="0.1" value="0">
                     </div>
                 </section>
 
-                <button class="reestablecerFiltros">Reestablecer filtros</button>
+                <button class="reestablecerFiltros" id="btnReestablecerFiltros">Reestablecer filtros</button>
 
                                  <!--final filtros-->
 
@@ -160,27 +159,21 @@
             <section class= "seccionPanelTexto oculto" id="panelText">
                 <h2 class="panelTextTitulo">TEXTO</h2>
                 <div class="panelControlTexto">
-                    <h3 class="panelControlTitulo">SUPERIOR</h3>
-                    <input aria-label="Texto Superior" class="textareaImput" id="textareaTopText"/>
-                        <span id="spanTopText">
-                            TOP TEXT
-                        </span>
+                    <h3 class="panelControlTextTitulo">SUPERIOR</h3>
+                    <input aria-label="Texto Superior" class="textareaImput" id="textareaTopText" placeholder="TOP TEXT" rows="1"/>
                     <div class="sinTexto">
                         <input type="checkbox" class="cajaSelectora" id="sinCajaTopText">
-                        <label for="seleccionarSinCajaTopText">
+                        <label for="seleccionarSinCajaTopText" class="lebelCajaSelectora">
                             Sin texto superior
                         </label>
                     </div>
                 </div>  
-                <div class="panelControlTexto">
-                    <h3 class="panelControlTitulo">INFERIOR</h3>
-                    <input aria-label="Texto Inferior" class="textareaImput" id="textareaBottomText"/>
-                    <span id="spanBottomText">
-                        BOTTOM TEXT
-                    </span>
+                <div class="panelControlTexto textoBottom">
+                    <h3 class="panelControlTextTitulo">INFERIOR</h3>
+                    <input aria-label="Texto Inferior" class="textareaImput" id="textareaBottomText" placeholder="TOP BOTTOM" rows="1"/>
                     <div class="sinTexto">
                         <input type="checkbox" class="cajaSelectora" id="sinCajaBottomText">
-                        <label for="seleccionarSinCajaBottomText">
+                        <label for="seleccionarSinCajaBottomText" class="lebelCajaSelectora">
                             Sin texto inferior
                         </label>
                     </div>
@@ -188,7 +181,7 @@
                                             <!--FUENTE-->
 
                 <div class="panelControlTexto">
-                    <h3 class="panelControlTitulo">FUENTE</h3>
+                    <h3 class="panelControlTextTitulo">FUENTE</h3>
 
                                             <!--Tipo de fuente-->
 
@@ -230,7 +223,7 @@
                     <div class="panelColorTexto">
                                                 <!--color texto-->
                         <div class="colorTexto">
-                            <h3 class="panelColorTitulo">COLOR</h3>
+                            <h3 class="panelControlTextTitulo">COLOR</h3>
                             <div class="controlTextoColor">
                                 <input name="Color de texto" type="color" id="textoColorInput" value="#000000" aria-label="Color de texto" />
                                 <span id="spanTextoColor" aria-hidden="true">#000000</span>
@@ -240,7 +233,7 @@
                                                <!--color fondo-->
 
                     <div class="panelColorFondoTexto">
-                        <h3 class="panelColorTitulo">Fondo</h3>
+                        <h3 class="panelControlTextTitulo">Fondo</h3>
                         <div class="controlTextoColorFondo">
                             <input name="Color de fondo del texto" type="color" id="backgroundColorInput" value="#FFFFFF" aria-label="Color de fondo del texto" />
                             <span id="spanTextoColorFondo" aria-hidden="true">#FFFFFF</span>
@@ -257,7 +250,7 @@
                                               <!--CONTORNO-->
 
                 <div class="panelControlTexto">
-                    <h3 class="panelColorTitulo">CONTORNO</h3>
+                    <h3 class="panelControlTextTitulo">CONTORNO</h3>
                     <div class="btnsContorno">
                         <button class="btnContorno" id="sinContorno">Ninguno</button>
                         <button class="btnContorno" id="contornoClaro">Claro</button>
@@ -268,7 +261,7 @@
                                                <!--PADING-->
 
                 <div class="panelControlTexto">
-                    <h3 class="panelColorTitulo">ESPACIADO</h3>
+                    <h3 class="panelControlTextTitulo">ESPACIADO</h3>
                     <input type="number" id="espacioInput" class="espacioInput" aria-label="Espaciado" min="10" max="50" value="35">
                 </div>
             
@@ -276,7 +269,7 @@
                                                 <!--ALTO DE LINEA-->
                
                 <div class="panelControlTexto">
-                    <h3 class="panelColorTitulo">INTERLINEADO</h3>
+                    <h3 class="panelControlTextTitulo">INTERLINEADO</h3>
                     <select id="interlineadoInput" class="interlineadoInput" aria-label="Interlineado">
                         <option value="0.8">0.8</option>
                         <option value="1">1</option>

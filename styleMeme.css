@@ -40,13 +40,14 @@
 }
 
 .boton {
-    font-size: 0.7em;
+    font-size: 0.6em;
+    padding: 1.5%;
     background-color: #191E2B;
     color: #e3f8e3;
-    padding: 1%;
     border: none;
     border-radius: 0.5em;
-    height: 6vh;
+    font: bold;
+    /* color: #dce4dc; */
 }
 
 .botonImg {
@@ -85,63 +86,55 @@
      ************************************************************************************************ */
 
 
-.contenidoSeccion {
-        flex-grow: 1;
-}
-
 .mainContenedor {
     background-color: #2d3443;
-    color: rgb(227, 248, 227);
-    flex-grow: 1;
+    color: #e3f8e3;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 5% 0%;
+    padding: 3% 0%;
 }
 
 .memeContenedor {
     background-color: #191E2B;
     width: 35%;
+    height: 67.8vh;
     position: relative;
     display: flex;
     flex-direction: column;
 }
 
 .textTop {
-    margin: auto;
-    position: static;
+    position: absolute;
+    top: 0%;
     width: 100%;
     font-size: 2.5em;
+    text-align: center;
+    padding-top: 3%;
     font-weight: bold;
     height: 10vh;
     background-color: aliceblue;
-    color: #191E2B;
-    /* display: inline-block; */
-    padding: 21px 50px;
-    
+    color: #191E2B;   
 }
 
 .textBottom{
-    margin: auto;
-    position: static;
+    position: absolute;
     right: 0%;
-    top: 82.9%;
+    bottom: 0%;
     width: 100%;
-    /* padding: 1%; */
+    text-align: center;
+    padding-top: 3%;
     font-size: 2.5em;
     font-weight: bold;
     height: 10vh;
     background-color: aliceblue;
     color: #191E2B;
-    /* display: inline-block; */
-    padding: 21px 50px;
-    
 }
 
 .memeContenido {
-    flex-grow: 1;
-    height: 45vh;
+    height: 100%;
+   
 }
 
 .imgMeme {
@@ -150,11 +143,11 @@
 }
 .botonDescargar{
     margin-top: 1.8em;
-    padding: 15px 15px;
-    height: auto;
+    padding: 15px;
     background-color: #2e7d32;
     color: white;
-    
+    border: none;
+    border-radius: 5px;
 }
 
   /* ************************************************************************************************
@@ -163,6 +156,7 @@
 
 .imagenPanel {
     width: 14%;
+    height: 100%;
     position: absolute;
     right: 00%;
     top: 00%;
@@ -200,10 +194,15 @@
     border: none;
     border-radius: 0.3em;
     margin-top: 5%;
+    color: #e3f8e3;
 }
 
 .panelInputImagen:hover {
     background-color: #464d5f;
+}
+
+.fondoTitulo {
+    font: bold;
 }
 
 .colorDeFondo {
@@ -232,10 +231,24 @@
 .FondoInput {
     width: 30%;
     border-radius: 50%;
+    border: none;
+    display: block;
+    background-color: transparent;
+    margin-top: 5%;
+    margin-left: 5%;
+}
+
+.spanFondo {
+    position: relative;
+    left: 35%;
+    bottom: 55%;
 }
 
 .modoSelector {
     width: 45%;
+    background-color: #afb4c0;
+    border-radius: 0.5em;
+    border: none;
 }
 .modoColorFondo {
     width: 100%;
@@ -246,30 +259,43 @@
     color: #e3f8e3;
 }
 .modoColorFondo:hover {
-    background-color: #464d5f;
+    background-color: #999ba0;
 }
 
 .selectorDeFiltro{
-    background-color: aquamarine;
     font-size: 0.8em;
     margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+}
+
+.valoresDeContrastes {
+    margin-bottom: 2%;
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+}
+
+.inputContrastes {
+    font-size: 1em;
+    margin-top: 5%;
+}
+
+.reestablecerFiltros {
+    margin-top: 5%;
+    border: none;
+    padding: 5%;
+    border-radius: 5px;
+    background-color: #394052;
+    color: #e3f8e3;
 }
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+  /* ************************************************************************************************
+                                            INICIO PANEL TEXTO
+     ************************************************************************************************ */
 
 .seccionPanelTexto {
     width: 14%;
@@ -278,5 +304,32 @@
     top: 00%;
     padding: 1%;
     background-color: #272e3f;
-    color: rgb(227, 248, 227);
+    color: #e3f8e3;
+}
+
+.panelTextTitulo {
+    text-align: center;
+    font-size: 1.2em;
+    margin-top: 5%;
+}
+
+.panelControlTextTitulo {
+    font-size: 0.8em;
+    font: bold;
+    margin-top: 15%;
+}
+
+.textareaImput {
+    padding: 3%;
+    font-size: 0.9em;
+    background-color: #394052;
+    color: #e3f8e3;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    margin-top: 5%;
+}
+.sinTexto {
+    font-size: 0.8em;
+    margin: 5% 0%;
 }

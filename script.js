@@ -9,9 +9,12 @@ const btnOscuro = document.getElementById('modoOscuro');
 const btnClaro = document.getElementById('modoClaro');
 const btnImg = document.getElementById('btnImg');
 const btnText = document.getElementById('btnText');
-const btnColorDeFondo = document.getElementById('btnBackgroundColor');
 const panelUrlImagen = document.getElementById('panelUrlImagen');
 const btnsFondo = document.getElementById('btnsFondo');
+const elegirColorFondo = document.getElementById('elegirColorFondo');
+const modoFondo = document.getElementById('modoFondo');
+const btnColorDeFondo = document.getElementById('btnBackgroundColor');
+const colorFondoInput = document.getElementById('colorFondoInput');
 const panelInputImagen = document.getElementById('panelInputImagen');
 const textareaTopText = document.getElementById('textareaTopText');
 const textareaBottomText = document.getElementById('textareaBottomText');
@@ -37,12 +40,21 @@ const levelSepia = document.getElementById('levelSepia');
 const levelHUE = document.getElementById('levelHUE');
 const levelSaturado = document.getElementById('levelSaturado');
 const levelNegativo = document.getElementById('levelNegativo');
+const opcionNinguno = document.getElementById('opcionNinguno');
+const opcionAclarar = document.getElementById('opcionNinguno');
+const opcionOscurecer = document.getElementById('opcionOscurecer');
+const opcionDiferencia = document.getElementById('opcionDiferencia');
+const opcionLuminosidad = document.getElementById('opcionLuminosidad');
+const opcionMultiplicar = document.getElementById('opcionMultiplicar');
+const btnReestablecerFiltros = document.getElementById('btnReestablecerFiltros');
 
+
+//                                     *************************************** MODO OSCURO/CLARO ***************************************
 
 btnOscuro.addEventListener('click', () =>{
     btnClaro.classList.remove('oculto');
     btnOscuro.classList.add('oculto');
-    header.style.backgroundColor= "#e3f8e3";
+    header.style.backgroundColor= "#dce4dc";
     header.style.color= "#191E2B";
     btnClaro.style.backgroundColor= "#e3f8e3";
     btnOscuro.style.backgroundColor= "#e3f8e3";
@@ -57,9 +69,20 @@ btnOscuro.addEventListener('click', () =>{
     panelImg.style.color= "#191E2B";
     panelText.style.backgroundColor= "#f0faf0";
     panelText.style.color= "#191E2B";
-    panelInputImagen.style.color= "#f0faf0";
+    panelInputImagen.style.color= "#191E2B";
+    panelInputImagen.style.backgroundColor= "#dce4dc";
+    elegirColorFondo.style.color= "#191E2B";
+    elegirColorFondo.style.backgroundColor= "#dce4dc";
+    modoFondo.style.color= "#191E2B";
+    modoFondo.style.backgroundColor= "#dce4dc";
+    btnReestablecerFiltros.style.color= "#191E2B";
+    btnReestablecerFiltros.style.backgroundColor= "#dce4dc";textareaTopText
+    textareaTopText.style.backgroundColor= "#dce4dc";
+    textareaTopText.style.color= "#191E2B";
+    textareaBottomText.style.backgroundColor= "#dce4dc";
+    textareaBottomText.style.color= "#191E2B";
   })
-
+  
 
 btnClaro.addEventListener('click', () =>{
     btnClaro.classList.add('oculto');
@@ -79,9 +102,21 @@ btnClaro.addEventListener('click', () =>{
     panelImg.style.color= "#e3f8e3";
     panelText.style.backgroundColor= "#272e3f";
     panelText.style.color= "#e3f8e3";
-    panelInputImagen.style.color= "#f0faf0";
+    panelInputImagen.style.color= "#e3f8e3";
+    panelInputImagen.style.backgroundColor= "#394052";
+    elegirColorFondo.style.color= "#e3f8e3";
+    elegirColorFondo.style.backgroundColor= "#394052";
+    modoFondo.style.color= "#e3f8e3";
+    modoFondo.style.backgroundColor= "#394052";
+    btnReestablecerFiltros.style.color= "#e3f8e3";
+    btnReestablecerFiltros.style.backgroundColor= "#394052";
+    textareaTopText.style.backgroundColor= "#394052";
+    textareaTopText.style.color= "#e3f8e3";
+    textareaBottomText.style.backgroundColor= "#394052";
+    textareaBottomText.style.color= "#e3f8e3";
   })
 
+  //                                   ************************* OCULTAR/APARECER PANELES DE TEXTO E IMAGEN ************************
 
 btnImg.addEventListener('click', () => {
     panelImg.classList.remove('oculto');
@@ -93,73 +128,60 @@ btnText.addEventListener('click', () => {
     panelImg.classList.add('oculto');
 })
 
-
-// levelContraste.addEventListener('input', (event) => {
-//   const valorContraste = event.target.value;
-//   inputContraste.innerHTML = `${valorContraste}%`;
-//   memeContenido.style.filter = `contrast${valorContraste}%`;
-  
-// })
-// console.log(valorContraste)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                                   //************inicio seccion panel texto************
-
-// sinCajaTopText.addEventListener('click', () => {
-//   topText.classList.add('oculto');
-//   // topText.classList.remove('oculto');
-// })
-
-// sinCajaBottomText.addEventListener('input', () => {
-//   main.classList.add('oculto');
-//   // topText.classList.remove('oculto');
-// })
-
-
-textareaTopText.addEventListener('input', () => {
-  topText.innerHTML = textareaTopText.value;
-
-});
-
-textareaBottomText.addEventListener('input', () => {
-  bottomText.innerHTML = textareaBottomText.value;
-});
-
+//                                     *************************************** PANEL IMAGEN ***************************************
 
 panelInputImagen.addEventListener('input', () =>{
   imgMeme.src = panelInputImagen.value;
 })
 
+
 inputBrillo.addEventListener('input', () =>{
-  imgMeme.style.filter = `brightness(${inputBrillo.value * 100}%)`
+  imgMeme.style.filter = `brightness(${inputBrillo.value})`
 })
 
 inputOpacidad.addEventListener('input', () =>{
   imgMeme.style.opacity = inputOpacidad.value;
 })
 
-
 inputContraste.addEventListener('input', () =>{
   imgMeme.style.filter = `contrast(${inputContraste.value * 100}%)`;
 })
 
-// inputDesenfoque.addEventListener('input', () =>{
-// imgMeme.style.filter = ('blur');
-  
-// })
+inputDesenfoque.addEventListener('input', () =>{
+  imgMeme.style.filter = `blur(${inputDesenfoque.value}px)`;
+})
 
-//inputEscala.addEventListener()
+inputEscala.addEventListener('input', () =>{
+  imgMeme.style.filter = `grayscale(${inputEscala.value}%)`;
+})
+
+inputSepia.addEventListener('input', () =>{
+  imgMeme.style.filter = `sepia(${inputSepia.value}%)`;
+})
+
+inputHUE.addEventListener('input', () =>{
+  imgMeme.style.filter = `hue-rotate(${inputHUE.value * 100}deg)`;
+})
+
+inputSaturado.addEventListener('input', () =>{
+  imgMeme.style.filter = `saturate(${inputSaturado.value}%)`;
+})
+
+inputNegativo.addEventListener('input', () =>{
+  imgMeme.style.filter = `invert(${inputNegativo.value})`;
+})
+
+
+
+
+                                   //************inicio seccion panel texto************
+
+
+
+textareaTopText.addEventListener('input', () => {
+  topText.innerHTML = textareaTopText.value;
+});
+
+textareaBottomText.addEventListener('input', () => {
+  bottomText.innerHTML = textareaBottomText.value;
+});
