@@ -12,9 +12,7 @@ const btnText = document.getElementById('btnText');
 const panelUrlImagen = document.getElementById('panelUrlImagen');
 const btnsFondo = document.getElementById('btnsFondo');
 const elegirColorFondo = document.getElementById('elegirColorFondo');
-const modoFondo = document.getElementById('modoFondo');
 const btnColorDeFondo = document.getElementById('btnBackgroundColor');
-const colorFondoInput = document.getElementById('colorFondoInput');
 const panelInputImagen = document.getElementById('panelInputImagen');
 const textareaTopText = document.getElementById('textareaTopText');
 const textareaBottomText = document.getElementById('textareaBottomText');
@@ -38,7 +36,8 @@ const opcionDiferencia = document.getElementById('opcionDiferencia');
 const opcionLuminosidad = document.getElementById('opcionLuminosidad');
 const opcionMultiplicar = document.getElementById('opcionMultiplicar');
 const btnReestablecerFiltros = document.getElementById('btnReestablecerFiltros');
-
+const divPanelTextoColor = document.getElementById('divPanelTextoColor');
+const divPanelTextoColorFondo = document.getElementById('divPanelTextoColorFondo');
 
 //                                     *************************************** MODO OSCURO/CLARO ***************************************
 
@@ -67,13 +66,26 @@ btnOscuro.addEventListener('click', () => {
   modoFondo.style.color = "#191E2B";
   modoFondo.style.backgroundColor = "#dce4dc";
   btnReestablecerFiltros.style.color = "#191E2B";
-  btnReestablecerFiltros.style.backgroundColor = "#dce4dc"; textareaTopText
+  btnReestablecerFiltros.style.backgroundColor = "#dce4dc";
   textareaTopText.style.backgroundColor = "#dce4dc";
   textareaTopText.style.color = "#191E2B";
   textareaBottomText.style.backgroundColor = "#dce4dc";
   textareaBottomText.style.color = "#191E2B";
+  tipoDeFuente.style.backgroundColor = "#dce4dc";
+  tipoDeFuente.style.color = "#191E2B";
+  tamanoInput.style.backgroundColor = "#dce4dc";
+  tamanoInput.style.color = "#191E2B";
+  alineacionIzquierda.style.backgroundColor = "#dce4dc";
+  alineacionIzquierda.style.color = "#191E2B";
+  alineacionDerecha.style.backgroundColor = "#dce4dc";
+  alineacionDerecha.style.color = "#191E2B";
+  alineacionCentro.style.backgroundColor = "#dce4dc";
+  alineacionCentro.style.color = "#191E2B";
+  divPanelTextoColor.style.backgroundColor = "#dce4dc";
+  divPanelTextoColor.style.color = "#191E2B";
+  divPanelTextoColorFondo.style.backgroundColor = "#dce4dc";
+  divPanelTextoColorFondo.style.color = "#191E2B";
 })
-
 
 btnClaro.addEventListener('click', () => {
   btnClaro.classList.add('oculto');
@@ -105,6 +117,20 @@ btnClaro.addEventListener('click', () => {
   textareaTopText.style.color = "#e3f8e3";
   textareaBottomText.style.backgroundColor = "#394052";
   textareaBottomText.style.color = "#e3f8e3";
+  tipoDeFuente.style.backgroundColor = "#394052";
+  tipoDeFuente.style.color = "#e3f8e3";
+  tamanoInput.style.backgroundColor = "#394052";
+  tamanoInput.style.color = "#e3f8e3";
+  alineacionIzquierda.style.backgroundColor = "#394052";
+  alineacionIzquierda.style.color = "#e3f8e3";
+  alineacionDerecha.style.backgroundColor = "#394052";
+  alineacionDerecha.style.color = "#e3f8e3";
+  alineacionCentro.style.backgroundColor = "#394052";
+  alineacionCentro.style.color = "#e3f8e3";
+  divPanelTextoColor.style.backgroundColor = "#394052";
+  divPanelTextoColor.style.color = "#e3f8e3";
+  divPanelTextoColorFondo.style.backgroundColor = "#394052";
+  divPanelTextoColorFondo.style.color = "#e3f8e3";
 })
 
 //                                   ************************* OCULTAR/APARECER PANELES DE TEXTO E IMAGEN ************************
@@ -122,14 +148,18 @@ btnText.addEventListener('click', () => {
 //                                     *************************************** PANEL IMAGEN ***************************************
 
 panelInputImagen.addEventListener('input', () => {
-  imgMeme.src = panelInputImagen.value;
+  imgMeme.style= `background-image: url("${panelInputImagen.value}");"`;
 });
 
-function updateAll(event) {
-  document.querySelectorAll("imgMeme").forEach(function(imgMeme) {
-    imgMeme.style.backgrounColor = event.target.value;
-  });
-}
+ const colorFondoInput = document.getElementById('colorFondoInput');
+ colorFondoInput.addEventListener('input', () => {
+   imgMeme.style.backgroundColor = colorFondoInput.value;
+})
+
+const lighten = document.getElementById('lighten');
+lighten.addEventListener('change', () => {
+   imgMeme.style.backgroundBlendMode= "lighten";
+})
 
 inputBrillo.addEventListener('input', () => {
   imgMeme.style.filter = `brightness(${inputBrillo.value})`
@@ -196,25 +226,6 @@ cajaSinBottomText.addEventListener('input', () => {
       bottomText.style.display = 'block';
     }
 })
-// const tamanoInput = document.getElementById('tamañoInput');
-
-// tamañoInput.addEventListener('change', () => {
-//   topText.style.fontSize = `${tamanoInput.value}px`;
-// });
-
-const actualizarTamanioTexto = () => {
-  topText.fontSize = `${tamañoInput.value}px`
-  bottomText.fontSize = `${tamañoInput.value}px"`
-}
-
-
-const actualizarFuente = () => {
-  const fuente = document.getElementById8('tipoDeFuente')
-  topText.style.fontFamily = fuente.value
-  bottomText.style.fontFamily = fuente.value
-}
-
-
 
 // **********Lo actualizado hoy funciones texto *******************************
 
