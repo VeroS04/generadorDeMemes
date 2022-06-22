@@ -387,3 +387,12 @@
     border-radius: 3px;
     border: none;
 }
+
+.btnLado:hover{
+    background-color: #8b97b6;
+}
+
+.btnLadoSelected{
+    background-color: #8b97b6;
+}
+

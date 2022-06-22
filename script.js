@@ -42,86 +42,86 @@ const btnReestablecerFiltros = document.getElementById('btnReestablecerFiltros')
 
 //                                     *************************************** MODO OSCURO/CLARO ***************************************
 
-btnOscuro.addEventListener('click', () =>{
-    btnClaro.classList.remove('oculto');
-    btnOscuro.classList.add('oculto');
-    header.style.backgroundColor= "#dce4dc";
-    header.style.color= "#191E2B";
-    btnClaro.style.backgroundColor= "#e3f8e3";
-    btnOscuro.style.backgroundColor= "#e3f8e3";
-    btnImg.style.backgroundColor= "#e3f8e3";
-    btnText.style.backgroundColor= "#e3f8e3";
-    btnClaro.style.color= "#191E2B";
-    btnOscuro.style.color= "#191E2B";
-    btnImg.style.color= "#191E2B";
-    btnText.style.color= "#191E2B";
-    main.style.backgroundColor= "#e3f0e3";
-    panelImg.style.backgroundColor= "#f0faf0";
-    panelImg.style.color= "#191E2B";
-    panelText.style.backgroundColor= "#f0faf0";
-    panelText.style.color= "#191E2B";
-    panelInputImagen.style.color= "#191E2B";
-    panelInputImagen.style.backgroundColor= "#dce4dc";
-    elegirColorFondo.style.color= "#191E2B";
-    elegirColorFondo.style.backgroundColor= "#dce4dc";
-    modoFondo.style.color= "#191E2B";
-    modoFondo.style.backgroundColor= "#dce4dc";
-    btnReestablecerFiltros.style.color= "#191E2B";
-    btnReestablecerFiltros.style.backgroundColor= "#dce4dc";textareaTopText
-    textareaTopText.style.backgroundColor= "#dce4dc";
-    textareaTopText.style.color= "#191E2B";
-    textareaBottomText.style.backgroundColor= "#dce4dc";
-    textareaBottomText.style.color= "#191E2B";
-  })
-  
+btnOscuro.addEventListener('click', () => {
+  btnClaro.classList.remove('oculto');
+  btnOscuro.classList.add('oculto');
+  header.style.backgroundColor = "#dce4dc";
+  header.style.color = "#191E2B";
+  btnClaro.style.backgroundColor = "#e3f8e3";
+  btnOscuro.style.backgroundColor = "#e3f8e3";
+  btnImg.style.backgroundColor = "#e3f8e3";
+  btnText.style.backgroundColor = "#e3f8e3";
+  btnClaro.style.color = "#191E2B";
+  btnOscuro.style.color = "#191E2B";
+  btnImg.style.color = "#191E2B";
+  btnText.style.color = "#191E2B";
+  main.style.backgroundColor = "#e3f0e3";
+  panelImg.style.backgroundColor = "#f0faf0";
+  panelImg.style.color = "#191E2B";
+  panelText.style.backgroundColor = "#f0faf0";
+  panelText.style.color = "#191E2B";
+  panelInputImagen.style.color = "#191E2B";
+  panelInputImagen.style.backgroundColor = "#dce4dc";
+  elegirColorFondo.style.color = "#191E2B";
+  elegirColorFondo.style.backgroundColor = "#dce4dc";
+  modoFondo.style.color = "#191E2B";
+  modoFondo.style.backgroundColor = "#dce4dc";
+  btnReestablecerFiltros.style.color = "#191E2B";
+  btnReestablecerFiltros.style.backgroundColor = "#dce4dc"; textareaTopText
+  textareaTopText.style.backgroundColor = "#dce4dc";
+  textareaTopText.style.color = "#191E2B";
+  textareaBottomText.style.backgroundColor = "#dce4dc";
+  textareaBottomText.style.color = "#191E2B";
+})
 
-btnClaro.addEventListener('click', () =>{
-    btnClaro.classList.add('oculto');
-    btnOscuro.classList.remove('oculto');
-    header.style.backgroundColor= "#191E2B";
-    header.style.color= "#e3f8e3";
-    btnClaro.style.backgroundColor= "#191E2B";
-    btnOscuro.style.backgroundColor= "#191E2B";
-    btnImg.style.backgroundColor= "#191E2B";
-    btnText.style.backgroundColor= "#191E2B";
-    btnClaro.style.color= "#e3f8e3";
-    btnOscuro.style.color= "#e3f8e3";
-    btnImg.style.color= "#e3f8e3";
-    btnText.style.color= "#e3f8e3";
-    main.style.backgroundColor= "#2d3443";
-    panelImg.style.backgroundColor= "#272e3f";
-    panelImg.style.color= "#e3f8e3";
-    panelText.style.backgroundColor= "#272e3f";
-    panelText.style.color= "#e3f8e3";
-    panelInputImagen.style.color= "#e3f8e3";
-    panelInputImagen.style.backgroundColor= "#394052";
-    elegirColorFondo.style.color= "#e3f8e3";
-    elegirColorFondo.style.backgroundColor= "#394052";
-    modoFondo.style.color= "#e3f8e3";
-    modoFondo.style.backgroundColor= "#394052";
-    btnReestablecerFiltros.style.color= "#e3f8e3";
-    btnReestablecerFiltros.style.backgroundColor= "#394052";
-    textareaTopText.style.backgroundColor= "#394052";
-    textareaTopText.style.color= "#e3f8e3";
-    textareaBottomText.style.backgroundColor= "#394052";
-    textareaBottomText.style.color= "#e3f8e3";
-  })
 
-  //                                   ************************* OCULTAR/APARECER PANELES DE TEXTO E IMAGEN ************************
+btnClaro.addEventListener('click', () => {
+  btnClaro.classList.add('oculto');
+  btnOscuro.classList.remove('oculto');
+  header.style.backgroundColor = "#191E2B";
+  header.style.color = "#e3f8e3";
+  btnClaro.style.backgroundColor = "#191E2B";
+  btnOscuro.style.backgroundColor = "#191E2B";
+  btnImg.style.backgroundColor = "#191E2B";
+  btnText.style.backgroundColor = "#191E2B";
+  btnClaro.style.color = "#e3f8e3";
+  btnOscuro.style.color = "#e3f8e3";
+  btnImg.style.color = "#e3f8e3";
+  btnText.style.color = "#e3f8e3";
+  main.style.backgroundColor = "#2d3443";
+  panelImg.style.backgroundColor = "#272e3f";
+  panelImg.style.color = "#e3f8e3";
+  panelText.style.backgroundColor = "#272e3f";
+  panelText.style.color = "#e3f8e3";
+  panelInputImagen.style.color = "#e3f8e3";
+  panelInputImagen.style.backgroundColor = "#394052";
+  elegirColorFondo.style.color = "#e3f8e3";
+  elegirColorFondo.style.backgroundColor = "#394052";
+  modoFondo.style.color = "#e3f8e3";
+  modoFondo.style.backgroundColor = "#394052";
+  btnReestablecerFiltros.style.color = "#e3f8e3";
+  btnReestablecerFiltros.style.backgroundColor = "#394052";
+  textareaTopText.style.backgroundColor = "#394052";
+  textareaTopText.style.color = "#e3f8e3";
+  textareaBottomText.style.backgroundColor = "#394052";
+  textareaBottomText.style.color = "#e3f8e3";
+})
+
+//                                   ************************* OCULTAR/APARECER PANELES DE TEXTO E IMAGEN ************************
 
 btnImg.addEventListener('click', () => {
-    panelImg.classList.remove('oculto');
-    panelText.classList.add('oculto');
+  panelImg.classList.remove('oculto');
+  panelText.classList.add('oculto');
 })
 
 btnText.addEventListener('click', () => {
-    panelText.classList.remove('oculto');
-    panelImg.classList.add('oculto');
+  panelText.classList.remove('oculto');
+  panelImg.classList.add('oculto');
 })
 
 //                                     *************************************** PANEL IMAGEN ***************************************
 
-panelInputImagen.addEventListener('input', () =>{
+panelInputImagen.addEventListener('input', () => {
   imgMeme.src = panelInputImagen.value;
 });
 
@@ -131,46 +131,46 @@ function updateAll(event) {
   });
 }
 
-inputBrillo.addEventListener('input', () =>{
+inputBrillo.addEventListener('input', () => {
   imgMeme.style.filter = `brightness(${inputBrillo.value})`
 });
 
-inputOpacidad.addEventListener('input', () =>{
+inputOpacidad.addEventListener('input', () => {
   imgMeme.style.filter = `opacity(${inputOpacidad.value})`;
 });
 
-inputContraste.addEventListener('input', () =>{
+inputContraste.addEventListener('input', () => {
   imgMeme.style.filter = `contrast(${inputContraste.value * 100}%)`;
 })
 
-inputDesenfoque.addEventListener('input', () =>{
+inputDesenfoque.addEventListener('input', () => {
   imgMeme.style.filter = `blur(${inputDesenfoque.value}px)`;
 })
 
-inputEscala.addEventListener('input', () =>{
+inputEscala.addEventListener('input', () => {
   imgMeme.style.filter = `grayscale(${inputEscala.value}%)`;
 })
 
-inputSepia.addEventListener('input', () =>{
+inputSepia.addEventListener('input', () => {
   imgMeme.style.filter = `sepia(${inputSepia.value}%)`;
 })
 
-inputHUE.addEventListener('input', () =>{
+inputHUE.addEventListener('input', () => {
   imgMeme.style.filter = `hue-rotate(${inputHUE.value * 100}deg)`;
 })
 
-inputSaturado.addEventListener('input', () =>{
+inputSaturado.addEventListener('input', () => {
   imgMeme.style.filter = `saturate(${inputSaturado.value}%)`;
 })
 
-inputNegativo.addEventListener('input', () =>{
+inputNegativo.addEventListener('input', () => {
   imgMeme.style.filter = `invert(${inputNegativo.value})`;
 })
 
 
 
 
-                                   //************inicio seccion panel texto************
+//************inicio seccion panel texto************
 
 
 textareaTopText.addEventListener('input', () => {
@@ -196,6 +196,11 @@ cajaSinBottomText.addEventListener('input', () => {
       bottomText.style.display = 'block';
     }
 })
+// const tamanoInput = document.getElementById('tamañoInput');
+
+// tamañoInput.addEventListener('change', () => {
+//   topText.style.fontSize = `${tamanoInput.value}px`;
+// });
 
 const actualizarTamanioTexto = () => {
   topText.fontSize = `${tamañoInput.value}px`
@@ -208,3 +213,73 @@ const actualizarFuente = () => {
   topText.style.fontFamily = fuente.value
   bottomText.style.fontFamily = fuente.value
 }
+
+
+
+// **********Lo actualizado hoy funciones texto *******************************
+
+const tipoDeFuente = document.getElementById('tipoDeFuente');
+tipoDeFuente.addEventListener('change', () => {
+  topText.style.fontFamily = tipoDeFuente.value;
+  bottomText.style.fontFamily = tipoDeFuente.value;
+  console.log(tipoDeFuente.value);
+})
+
+const tamanoInput = document.getElementById('tamanoInput');
+tamanoInput.addEventListener('input', () => {
+  topText.style.fontSize = `${tamanoInput.value}px`;
+  bottomText.style.fontSize = `${tamanoInput.value}px`;
+})
+
+const alineacionIzquierda = document.getElementById('alineacionIzquierda');
+alineacionIzquierda.addEventListener('click', () => {
+  topText.style.textAlign = "left";
+  bottomText.style.textAlign = "left";
+  alineacionIzquierda.classList.add('btnLadoSelected');
+  alineacionCentro.classList.remove('btnLadoSelected');
+  alineacionDerecha.classList.remove('btnLadoSelected');
+})
+
+const alineacionCentro = document.getElementById('alineacionCentro');
+alineacionCentro.addEventListener('click', () => {
+  topText.style.textAlign = "center";
+  bottomText.style.textAlign = "center";
+  alineacionCentro.classList.add('btnLadoSelected');
+  alineacionDerecha.classList.remove('btnLadoSelected');
+  alineacionIzquierda.classList.remove('btnLadoSelected');
+})
+
+const alineacionDerecha = document.getElementById('alineacionDerecha');
+alineacionDerecha.addEventListener('click', () => {
+  topText.style.textAlign = "right";
+  bottomText.style.textAlign = "right";
+  alineacionDerecha.classList.add('btnLadoSelected');
+  alineacionIzquierda.classList.remove('btnLadoSelected');
+  alineacionCentro.classList.remove('btnLadoSelected');
+})
+
+const textoColorInput = document.getElementById('textoColorInput');
+textoColorInput.addEventListener('input', () =>{
+  topText.style.color = textoColorInput.value;
+  bottomText.style.color = textoColorInput.value;
+
+})
+
+const backgroundColorInput = document.getElementById('backgroundColorInput');
+backgroundColorInput.addEventListener('input', () =>{
+  if(!sinColorFondoTexto.checked){
+    topText.style.backgroundColor = backgroundColorInput.value;
+    bottomText.style.backgroundColor = backgroundColorInput.value;
+  }
+})
+
+const sinColorFondoTexto = document.getElementById('sinColorFondoTexto');
+sinColorFondoTexto.addEventListener('input', ()=> {
+  if(sinColorFondoTexto.checked){
+    topText.style.backgroundColor = 'transparent';
+    bottomText.style.backgroundColor ='transparent';
+  }else{
+    topText.style.backgroundColor = backgroundColorInput.value;
+    bottomText.style.backgroundColor = backgroundColorInput.value;
+  }
+})
