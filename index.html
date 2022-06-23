@@ -20,13 +20,13 @@
         <header id="header" class="headEstilo">
             <h1 class="headerTitulo">Generador de Memes</h1>
                 <div class="headerContenedorDeBotones">
-                    <button class="buttonImg boton botonImg" id="btnImg">
+                    <button class="buttonImg boton botonImg" id="btnImg" aria-label="boton al panel de imagen">
                         <i class="fa-solid fa-image headerIcono"></i>Imagen</button>
-                    <button class="buttonText boton botonTexto" id="btnText">
+                    <button class="buttonText boton botonTexto" id="btnText" aria-label="boton al panel de texto">
                         <i class="fa-solid fa-a headerIcono"></i>Texto</button>
-                    <button class="botonModoOscuro boton" id="modoOscuro">
+                    <button class="botonModoOscuro boton" id="modoOscuro" aria-label="boton modo oscuro">
                         <i class="fa-solid fa-lightbulb headerIcono"></i></i>Modo oscuro</buton>
-                    <button class="botonModoClaro boton oculto" id="modoClaro">
+                    <button class="botonModoClaro boton oculto" id="modoClaro" aria-label="boton modo claro">
                         <i class="fa-solid fa-lightbulb headerIcono"></i>Modo claro</button>
                 </div>
         </header>
@@ -46,12 +46,12 @@
 
         <main class="mainContenedor" id="main">
             <div class="memeContenedor">
-                    <p class="textTop" id="topText">TOP TEXT</p>
-                <div id="imgMeme" class="imgMeme" src(desconocido) aria-label="imagen de meme">
+                    <p class="textTop" id="topText" aria-label="texto Superior">TOP TEXT</p>
+                <div id="imgMeme" class="imgMeme" aria-label="imagen de meme">
                 </div>  
-                    <p class="textBottom" id="bottomText">BOTTOM TEXT</p>
+                    <p class="textBottom" id="bottomText" aria-label="texto inferior">BOTTOM TEXT</p>
             </div>
-            <button class="botonDescargar"><i class="fas fa-download button-icon-text" aria-hidden="true"></i>Descargar meme</button>
+            <button class="botonDescargar" id="botonDescargar" name="boton de descarga"><i class="fas fa-download button-icon-text"></i>Descargar meme</button>
         </main>
 
         <!--
@@ -64,15 +64,15 @@
                                                 ****************************** -->
       
         <aside class="controlAside" id="aside">
-            <section  class="imagenPanel" id="panelImg">
+            <section  class="imagenPanel" id="panelImg" aria-label="panel de imagen">
 
                 <!--inicio url -->
 
-                <button class="botonCerrar"><i class="fa-solid fa-xmark"></i></button>
+                <button class="botonCerrar" name="boton cerrar"><i class="fa-solid fa-xmark"></i></button>
                 <h2 class="tituloPanelImagen">IMAGEN</h2>
                 <div class="panelUrlImagen">
                     <p class="urlTextoImagen">URL</p>
-                    <input class="panelInputImagen" id="panelInputImagen" type="text">
+                    <input class="panelInputImagen" id="panelInputImagen" type="text" aria-label="url de imagen">
                 </div>
                                      <!--final url-->
 
@@ -82,17 +82,17 @@
                     <p class="fondoTitulo" id="btnColorDeFondo">FONDO</p>
                     <div class="fondoBotones" id="btnsFondo">
                         <div class="btnColorFondo" id="elegirColorFondo">
-                            <input type="color" class="FondoInput" id="colorFondoInput" value="#FFFFFF">
-                            <span class="spanFondo">#FFFFFF</span>
+                            <input type="color" class="FondoInput" id="colorFondoInput" value="#FFFFFF" aria-label="color de fondo de imagen">
+                            <span class="spanFondo" >#FFFFFF</span>
                         </div>
                         <div class="modoSelector" id="eleccionDeModo">
-                            <select id="modoFondo" class="modoColorFondo">
-                                <option id="unset">Ninguno</option>
-                                <option id="lighten" value="lighten">Aclarar</option>
-                                <option id="darken">Oscurecer</option>
-                                <option id="difference">Diferencia</option>
-                                <option id="luminosity">Luminosidad</option>
-                                <option id="multiply">Multiplicar</option>
+                            <select id="modoFondo" class="modoColorFondo" aria-label="modo de fondo de imagen">
+                                <option id="ninguno" aria-label="opcion ninguno">Ninguno</option>
+                                <option id="lighten" aria-label="opcion aclarar">Aclarar</option>
+                                <option id="darken" aria-label="opcion oscurecer">Oscurecer</option>
+                                <option id="difference" aria-label="opcion diferencia">Diferencia</option>
+                                <option id="luminosity" aria-label="opcion luminosidad">Luminosidad</option>
+                                <option id="multiply" aria-label="opcion multiplicar">Multiplicar</option>
                             </select>
                         </div>
                     </div>
@@ -101,42 +101,42 @@
                                        <!--inicio filtros-->
 
                 <section class="selectorDeFiltro" id="seccionFiltros">
-                    <p class="tituloFiltros">FILTROS</p>
+                    <p class="tituloFiltros" aria-label="filtros">FILTROS</p>
                     <div class="valoresDeContrastes">
-                        <label id="levelbrillo">BRILLO</label>
-                        <input id="inputBrillo" class="inputContrastes" type="range" min="0" max="1" step="0.1" value="1">
+                        <label id="levelbrillo" for="brillo">BRILLO</label>
+                        <input id="inputBrillo" class="inputContrastes" name="brillo" type="range" min="0" max="1" step="0.1" value="1" aria-label="brillo">
                     </div>
                     <div class="valoresDeContrastes">
-                        <label id="levelOpacidad">OPACIDAD</label>
-                        <input id="inputOpacidad" class="inputContrastes" type="range" min="0" max="1" step="0.1" value="1">
+                        <label id="levelOpacidad" for="opacidad">OPACIDAD</label>
+                        <input id="inputOpacidad" class="inputContrastes" name="opacidad" type="range" min="0" max="1" step="0.1" value="1" aria-label="opacidad">
                     </div>
                     <div class="valoresDeContrastes">
-                        <label id="levelContraste">CONTRASTE</label>
-                        <input id="inputContraste" class="inputContrastes" type="range" min="0" max="1" step="0.1" value="1">
+                        <label id="levelContraste" for="contraste">CONTRASTE</label>
+                        <input id="inputContraste" class="inputContrastes" name="contraste" type="range" min="0" max="1" step="0.1" value="1" aria-label="contraste">
                     </div>
                     <div class="valoresDeContrastes">
-                        <label id="levelDesenfoque">DESENFOQUE</label>
-                        <input id="inputDesenfoque" class="inputContrastes" type="range" min="0" max="10" step="0.1" value="0">
+                        <label id="levelDesenfoque" for="desenfoque">DESENFOQUE</label>
+                        <input id="inputDesenfoque" class="inputContrastes" name="desenfoque" type="range" min="0" max="10" step="0.1" value="0" aria-label="desenfoque">
                     </div>
                     <div class="valoresDeContrastes">
-                        <label id="levelEscala">ESCALA DE GRISES</label>
-                        <input id="inputEscala" class="inputContrastes" type="range" min="0" max="100" step="1" value="0">
+                        <label id="levelEscala" for="escalaDeGrises">ESCALA DE GRISES</label>
+                        <input id="inputEscala" class="inputContrastes" name="escalaDeGrises" type="range" min="0" max="100" step="1" value="0" aria-label="escala de grises">
                     </div>
                     <div class="valoresDeContrastes">
-                        <label id="levelSepia">SEPIA</label>
-                        <input id="inputSepia" class="inputContrastes" type="range" min="0" max="100" step="1" value="0">
+                        <label id="levelSepia" for="sepia">SEPIA</label>
+                        <input id="inputSepia" class="inputContrastes" name="sepia" type="range" min="0" max="100" step="1" value="0" aria-label="sepia">
                     </div>
                     <div class="valoresDeContrastes">
-                        <label id="levelHUE">HUE</label>
-                        <input id="inputHUE" class="inputContrastes" type="range" min="0" max="359" step="1" value="0">
+                        <label id="levelHUE" for="hue">HUE</label>
+                        <input id="inputHUE" class="inputContrastes" name="hue" type="range" min="0" max="359" step="1" value="0" aria-label="hue rotar matiz">
                     </div>
                     <div class="valoresDeContrastes">
-                        <label id="levelSaturado">SATURADO</label>
-                        <input id="inputSaturado" class="inputContrastes" type="range" min="100" max="1000" step="10" value="100">
+                        <label id="levelSaturado" for="saturado">SATURADO</label>
+                        <input id="inputSaturado" class="inputContrastes" name="saturado" type="range" min="100" max="1000" step="10" value="100" aria-label="saturado">
                     </div>
                     <div class="valoresDeContrastes">
-                        <label id="levelNegativo">NEGATIVO</label>
-                        <input id="inputNegativo" class="inputContrastes" type="range" min="0" max="1" step="0.1" value="0">
+                        <label id="levelNegativo" for="negativo">NEGATIVO</label>
+                        <input id="inputNegativo" class="inputContrastes" name="negativo" type="range" min="0" max="1" step="0.1" value="0" aria-label="negativo">
                     </div>
                 </section>
 

@@ -200,6 +200,7 @@ body {
   display: flex;
   margin-top: 5%;
   height: 4vh;
+  width: 100%;
 }
 
 .btnColorFondo {

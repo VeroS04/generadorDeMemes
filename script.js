@@ -133,6 +133,7 @@ btnClaro.addEventListener('click', () => {
   divPanelTextoColorFondo.style.color = "#e3f8e3";
 })
 
+
 //                                   ************************* OCULTAR/APARECER PANELES DE TEXTO E IMAGEN ************************
 
 btnImg.addEventListener('click', () => {
@@ -156,10 +157,6 @@ panelInputImagen.addEventListener('input', () => {
    imgMeme.style.backgroundColor = colorFondoInput.value;
 })
 
-const lighten = document.getElementById('lighten');
-lighten.addEventListener('change', () => {
-   imgMeme.style.backgroundBlendMode= "lighten";
-})
 
 inputBrillo.addEventListener('input', () => {
   imgMeme.style.filter = `brightness(${inputBrillo.value})`
@@ -197,7 +194,26 @@ inputNegativo.addEventListener('input', () => {
   imgMeme.style.filter = `invert(${inputNegativo.value})`;
 })
 
-
+btnReestablecerFiltros.addEventListener('click', () => {
+  inputBrillo.value = 1;
+  imgMeme.style.filter = `brightness(${inputBrillo.value})`
+  inputOpacidad.value = 1;
+  imgMeme.style.filter = `opacity(${inputOpacidad.value})`;
+  inputContraste.value = 100;
+  imgMeme.style.filter = `contrast(${inputContraste.value * 100}%)`;
+  inputDesenfoque.value = 0;
+  imgMeme.style.filter = `blur(${inputDesenfoque.value}px)`;
+  inputEscala.value = 0;
+  imgMeme.style.filter = `grayscale(${inputEscala.value}%)`;
+  inputSepia.value = 0;
+  imgMeme.style.filter = `sepia(${inputSepia.value}%)`;
+  inputHUE.value = 0;
+  imgMeme.style.filter = `hue-rotate(${inputHUE.value * 100}deg)`;
+  inputSaturado.value = 100;
+  imgMeme.style.filter = `saturate(${inputSaturado.value}%)`;
+  inputNegativo.value = 0;
+  imgMeme.style.filter = `invert(${inputNegativo.value})`;
+} )
 
 
 //************inicio seccion panel texto************
@@ -214,6 +230,7 @@ textareaBottomText.addEventListener('input', () => {
 cajaSinTopText.addEventListener('input', () => {
   if(cajaSinTopText.checked) {
       topText.style.display = 'none';
+      imgMeme.style.backgroundSize = "cover"
     } else {
       topText.style.display = 'block';
     }
@@ -222,6 +239,7 @@ cajaSinTopText.addEventListener('input', () => {
 cajaSinBottomText.addEventListener('input', () => {
   if(cajaSinBottomText.checked) {
       bottomText.style.display = 'none';
+      imgMeme.style.backgroundSize = "cover"
     } else {
       bottomText.style.display = 'block';
     }
