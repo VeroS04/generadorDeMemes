@@ -149,7 +149,7 @@ btnText.addEventListener('click', () => {
 //                                     *************************************** PANEL IMAGEN ***************************************
 
 panelInputImagen.addEventListener('input', () => {
-  imgMeme.style= `background-image: url("${panelInputImagen.value}");"`;
+  imgMeme.style= `background-image: url("${panelInputImagen.value}");"`; 
 });
 
  const colorFondoInput = document.getElementById('colorFondoInput');
@@ -245,7 +245,7 @@ cajaSinBottomText.addEventListener('input', () => {
     }
 })
 
-// **********Lo actualizado hoy funciones texto *******************************
+
 
 const tipoDeFuente = document.getElementById('tipoDeFuente');
 tipoDeFuente.addEventListener('change', () => {
@@ -312,3 +312,63 @@ sinColorFondoTexto.addEventListener('input', ()=> {
     bottomText.style.backgroundColor = backgroundColorInput.value;
   }
 })
+
+const sinContorno = document.getElementById('sinContorno');
+const contornoClaro = document.getElementById('contornoClaro');
+const contornoOscuro = document.getElementById('contornoOscuro');
+
+sinContorno.addEventListener('click', () =>{
+topText.style.textShadow = 'none';
+bottomText.style.textShadow = 'none';
+sinContorno.classList.add('btnContornoSelected');
+contornoClaro.classList.remove('btnContornoSelected');
+contornoOscuro.classList.remove('btnContornoSelected');
+})
+
+contornoClaro.addEventListener('click',() =>{
+topText.style.textShadow = '3px 6px 7px white';
+bottomText.style.textShadow = '3px 6px 7px white';
+contornoClaro.classList.add('btnContornoSelected');
+sinContorno.classList.remove('btnContornoSelected');
+contornoOscuro.classList.remove('btnContornoSelected')
+
+})
+
+contornoOscuro.addEventListener('click',() =>{
+topText.style.textShadow = '3px 6px 7px black';
+bottomText.style.textShadow = '3px 6px 7px black';
+contornoOscuro.classList.add('btnContornoSelected');
+sinContorno.classList.remove('btnContornoSelected');
+contornoClaro.classList.remove('btnContornoSelected');
+})
+
+
+// const alineacionIzquierda = document.getElementById('alineacionIzquierda');
+// alineacionIzquierda.addEventListener('click', () => {
+//   topText.style.textAlign = "left";
+//   bottomText.style.textAlign = "left";
+//   alineacionIzquierda.classList.add('btnLadoSelected');
+//   alineacionCentro.classList.remove('btnLadoSelected');
+//   alineacionDerecha.classList.remove('btnLadoSelected');
+// })
+
+
+
+
+const espacioInput = document.getElementById('espacioInput');
+espacioInput.addEventListener('input', () =>{
+  topText.style.padding = `${espacioInput.value}px`;
+  bottomText.style.padding = `${espacioInput.value}px`;
+  console.log(espacioInput.value);
+})
+
+
+const interlineadoInput = document.getElementById('interlineadoInput');
+interlineadoInput.addEventListener('change',() =>{
+  topText.style.lineHeight = interlineadoInput.value; 
+  bottomText.style.lineHeight = interlineadoInput.value;
+  console.log(interlineadoInput.value);
+})
+
+
+

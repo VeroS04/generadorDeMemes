@@ -134,6 +134,12 @@ body {
   color: white;
   border: none;
   border-radius: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.botonDescargar:hover{
+  background-color: #174b19;
 }
 
 /* ************************************************************************************************
@@ -216,13 +222,12 @@ body {
 }
 
 .FondoInput {
-  width: 30%;
   border-radius: 100%;
   border: none;
   display: block;
   background-color: transparent;
   margin-top: 5%;
-  margin-left: 5%;
+  
 }
 
 .spanFondo {
@@ -277,6 +282,10 @@ body {
   color: #e3f8e3;
 }
 
+.reestablecerFiltros:hover{
+  background-color: #464d5f;
+}
+
 /* ************************************************************************************************
                                             INICIO PANEL TEXTO
      ************************************************************************************************ */
@@ -314,6 +323,10 @@ body {
   border-radius: 5px;
   margin-top: 5%;
 }
+
+.textareaImput:hover{
+  background-color: #464d5f;
+}
 .sinTexto {
   font-size: 0.8em;
   margin: 5% 0%;
@@ -329,10 +342,18 @@ body {
   border: none;
 }
 
+.panelFuenteInput:hover{
+  background-color: #464d5f;
+}
+
 .panelControlTextoTamaño {
   display: flex;
   margin-top: 3%;
 }
+
+/* .panelControlTextoTamaño:hover{
+  background-color: #464d5f;
+} */
 
 .panelAlineamiento {
   width: 50%;
@@ -349,6 +370,10 @@ body {
   border: none;
 }
 
+.controlTamañoInput:hover{
+  background-color: #464d5f;
+} 
+
 .btnLado {
   background-color: #394052;
   color: #e3f8e3;
@@ -359,7 +384,7 @@ body {
 }
 
 .btnLado:hover {
-  background-color: #8b97b6;
+  background-color: #464d5f;;
 }
 
 .btnLadoSelected {
@@ -386,10 +411,67 @@ body {
   border: none;
   display: flex;
   justify-content: space-evenly;
+  padding: 5%;
 }
 
 .spanTextoColor {
   font-size: 0.8em;
   margin: auto;
 }
+/* 
+.btnsContorno{
+ 
+  display: flex;
+  justify-content: space-around;
+} */
+
+.btnContorno{
+  background-color: #394052;
+  color: #e3f8e3;
+  border-radius: var(--border-radius);
+  font-size: 0.8em;
+  padding: 3% 2%;
+  margin-top: 4%;
+  border-radius: 5px;
+  border: none;
+  
+}
+.btnContorno:hover{
+  background-color:  #464d5f;
+}
+
+.btnContornoSelected {
+  background-color:  #464d5f;
+}
+
+
+
+.espacioInput{
+  background-color: #394052;
+  color: #e3f8e3;
+  margin-top: 3%;
+  width: 100%;
+  padding: 6%;
+  border-radius: 3px;
+  border: none;
+}
+
+.espacioInput:hover{
+  background-color: #464d5f;
+}
+
+.interlineadoInput{
+  background-color: #394052;
+  color: #e3f8e3;
+  margin-top: 3%;
+  width: 100%;
+  padding: 6%;
+  border-radius: 3px;
+  border: none;
+}
+
+.interlineadoInput:hover{
+  background-color: #464d5f;
+}
+
 
