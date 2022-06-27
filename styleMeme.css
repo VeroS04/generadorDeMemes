@@ -29,6 +29,8 @@ body {
 
 .headerTitulo {
   font-size: 1.3em;
+  width: 60%;
+  margin-left: 20%;
 }
 
 .headerContenedorDeBotones {
@@ -125,6 +127,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  background-blend-mode: screen;
 }
 
 .botonDescargar {
@@ -211,10 +214,11 @@ body {
 
 .btnColorFondo {
   background-color: #394052;
-  width: 45%;
-  margin-right: 10%;
+  width: 50%;
+  margin-right: 5%;
   border-radius: 0.5em;
   border: none;
+  display: flex;
 }
 
 .btnColorFondo:focus {
@@ -222,22 +226,23 @@ body {
 }
 
 .FondoInput {
-  border-radius: 100%;
-  border: none;
+  border: 0;
+  outline: 0;
   display: block;
-  background-color: transparent;
   margin-top: 5%;
+  margin-left: 5%;
+  width: 28%;
+  border-radius: 50%;
   
 }
 
 .spanFondo {
-  position: relative;
-  left: 35%;
-  bottom: 55%;
+  margin-top: 10%;
+  margin-left: 2%;
 }
 
 .modoSelector {
-  width: 45%;
+  width: 50%;
   background-color: #afb4c0;
   border-radius: 0.5em;
   border: none;

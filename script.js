@@ -157,6 +157,11 @@ panelInputImagen.addEventListener('input', () => {
    imgMeme.style.backgroundColor = colorFondoInput.value;
 })
 
+const modoFondo = document.getElementById('modoFondo');
+modoFondo.addEventListener('input', () => {
+  imgMeme.style.backgroundBlendMode = modoFondo.value;
+})
+
 
 inputBrillo.addEventListener('input', () => {
   imgMeme.style.filter = `brightness(${inputBrillo.value})`
