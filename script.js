@@ -326,8 +326,8 @@ contornoOscuro.classList.remove('btnContornoSelected');
 })
 
 contornoClaro.addEventListener('click',() =>{
-topText.style.textShadow = '3px 6px 7px white';
-bottomText.style.textShadow = '3px 6px 7px white';
+topText.style.textShadow = '-1px 0 white, 0 1px white, 1px 0 white, 0 -1px white';
+bottomText.style.textShadow = '-1px 0 white, 0 1px white, 1px 0 white, 0 -1px white';
 contornoClaro.classList.add('btnContornoSelected');
 sinContorno.classList.remove('btnContornoSelected');
 contornoOscuro.classList.remove('btnContornoSelected')
@@ -335,8 +335,8 @@ contornoOscuro.classList.remove('btnContornoSelected')
 })
 
 contornoOscuro.addEventListener('click',() =>{
-topText.style.textShadow = '3px 6px 7px black';
-bottomText.style.textShadow = '3px 6px 7px black';
+topText.style.textShadow = '-1px 0 black, 0 1px black, 1px 0 black, 0 -1px black';
+bottomText.style.textShadow = '-1px 0 black, 0 1px black, 1px 0 black, 0 -1px black';
 contornoOscuro.classList.add('btnContornoSelected');
 sinContorno.classList.remove('btnContornoSelected');
 contornoClaro.classList.remove('btnContornoSelected');
