@@ -155,25 +155,9 @@ panelInputImagen.addEventListener("input", () => {
   imgMeme.style = `background-image: url("${panelInputImagen.value}");"`;
 });
 
-<<<<<<< HEAD
 const colorFondoInput = document.getElementById("colorFondoInput");
 colorFondoInput.addEventListener("input", () => {
   imgMeme.style.backgroundColor = colorFondoInput.value;
-=======
- const colorFondoInput = document.getElementById('colorFondoInput');
- colorFondoInput.addEventListener('input', () => {
-   imgMeme.style.backgroundColor = colorFondoInput.value;
-})
-
-const modoFondo = document.getElementById('modoFondo');
-modoFondo.addEventListener('input', () => {
-  imgMeme.style.backgroundBlendMode = modoFondo.value;
-})
-
-
-inputBrillo.addEventListener('input', () => {
-  imgMeme.style.filter = `brightness(${inputBrillo.value})`
->>>>>>> b02fbed531d25d67c88035355c48352f7a9cbd19
 });
 
 inputBrillo.addEventListener("input", () => {
