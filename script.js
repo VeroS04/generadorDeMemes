@@ -1,49 +1,53 @@
-const header = document.getElementById('header');
-const main = document.getElementById('main');
-const imgMeme = document.getElementById('imgMeme');
-const memeContenido = document.getElementById('memeContenido');
-const aside = document.getElementById('aside');
-const panelImg = document.getElementById('panelImg');
-const panelText = document.getElementById('panelText');
-const btnOscuro = document.getElementById('modoOscuro');
-const btnClaro = document.getElementById('modoClaro');
-const btnImg = document.getElementById('btnImg');
-const btnText = document.getElementById('btnText');
-const panelUrlImagen = document.getElementById('panelUrlImagen');
-const btnsFondo = document.getElementById('btnsFondo');
-const elegirColorFondo = document.getElementById('elegirColorFondo');
-const btnColorDeFondo = document.getElementById('btnBackgroundColor');
-const panelInputImagen = document.getElementById('panelInputImagen');
-const textareaTopText = document.getElementById('textareaTopText');
-const textareaBottomText = document.getElementById('textareaBottomText');
-const topText = document.getElementById('topText');
-const bottomText = document.getElementById('bottomText');
-const cajaSinTopText = document.getElementById('cajaSinTopText');
-const cajaSinBottomText = document.getElementById('cajaSinBottomText');
-const inputBrillo = document.getElementById('inputBrillo');
-const inputOpacidad = document.getElementById('inputOpacidad');
-const inputContraste = document.getElementById('inputContraste');
-const inputDesenfoque = document.getElementById('inputDesenfoque');
-const inputEscala = document.getElementById('inputEscala');
-const inputSepia = document.getElementById('inputSepia');
-const inputHUE = document.getElementById('inputHUE');
-const inputSaturado = document.getElementById('inputSaturado');
-const inputNegativo = document.getElementById('inputNegativo');
-const opcionNinguno = document.getElementById('opcionNinguno');
-const opcionAclarar = document.getElementById('opcionNinguno');
-const opcionOscurecer = document.getElementById('opcionOscurecer');
-const opcionDiferencia = document.getElementById('opcionDiferencia');
-const opcionLuminosidad = document.getElementById('opcionLuminosidad');
-const opcionMultiplicar = document.getElementById('opcionMultiplicar');
-const btnReestablecerFiltros = document.getElementById('btnReestablecerFiltros');
-const divPanelTextoColor = document.getElementById('divPanelTextoColor');
-const divPanelTextoColorFondo = document.getElementById('divPanelTextoColorFondo');
+const header = document.getElementById("header");
+const main = document.getElementById("main");
+const imgMeme = document.getElementById("imgMeme");
+const memeContenido = document.getElementById("memeContenido");
+const aside = document.getElementById("aside");
+const panelImg = document.getElementById("panelImg");
+const panelText = document.getElementById("panelText");
+const btnOscuro = document.getElementById("modoOscuro");
+const btnClaro = document.getElementById("modoClaro");
+const btnImg = document.getElementById("btnImg");
+const btnText = document.getElementById("btnText");
+const panelUrlImagen = document.getElementById("panelUrlImagen");
+const btnsFondo = document.getElementById("btnsFondo");
+const elegirColorFondo = document.getElementById("elegirColorFondo");
+const btnColorDeFondo = document.getElementById("btnBackgroundColor");
+const panelInputImagen = document.getElementById("panelInputImagen");
+const textareaTopText = document.getElementById("textareaTopText");
+const textareaBottomText = document.getElementById("textareaBottomText");
+const topText = document.getElementById("topText");
+const bottomText = document.getElementById("bottomText");
+const cajaSinTopText = document.getElementById("cajaSinTopText");
+const cajaSinBottomText = document.getElementById("cajaSinBottomText");
+const inputBrillo = document.getElementById("inputBrillo");
+const inputOpacidad = document.getElementById("inputOpacidad");
+const inputContraste = document.getElementById("inputContraste");
+const inputDesenfoque = document.getElementById("inputDesenfoque");
+const inputEscala = document.getElementById("inputEscala");
+const inputSepia = document.getElementById("inputSepia");
+const inputHUE = document.getElementById("inputHUE");
+const inputSaturado = document.getElementById("inputSaturado");
+const inputNegativo = document.getElementById("inputNegativo");
+const opcionNinguno = document.getElementById("opcionNinguno");
+const opcionAclarar = document.getElementById("opcionNinguno");
+const opcionOscurecer = document.getElementById("opcionOscurecer");
+const opcionDiferencia = document.getElementById("opcionDiferencia");
+const opcionLuminosidad = document.getElementById("opcionLuminosidad");
+const opcionMultiplicar = document.getElementById("opcionMultiplicar");
+const btnReestablecerFiltros = document.getElementById(
+  "btnReestablecerFiltros"
+);
+const divPanelTextoColor = document.getElementById("divPanelTextoColor");
+const divPanelTextoColorFondo = document.getElementById(
+  "divPanelTextoColorFondo"
+);
 
 //                                     *************************************** MODO OSCURO/CLARO ***************************************
 
-btnOscuro.addEventListener('click', () => {
-  btnClaro.classList.remove('oculto');
-  btnOscuro.classList.add('oculto');
+btnOscuro.addEventListener("click", () => {
+  btnClaro.classList.remove("oculto");
+  btnOscuro.classList.add("oculto");
   header.style.backgroundColor = "#dce4dc";
   header.style.color = "#191E2B";
   btnClaro.style.backgroundColor = "#e3f8e3";
@@ -85,11 +89,11 @@ btnOscuro.addEventListener('click', () => {
   divPanelTextoColor.style.color = "#191E2B";
   divPanelTextoColorFondo.style.backgroundColor = "#dce4dc";
   divPanelTextoColorFondo.style.color = "#191E2B";
-})
+});
 
-btnClaro.addEventListener('click', () => {
-  btnClaro.classList.add('oculto');
-  btnOscuro.classList.remove('oculto');
+btnClaro.addEventListener("click", () => {
+  btnClaro.classList.add("oculto");
+  btnOscuro.classList.remove("oculto");
   header.style.backgroundColor = "#191E2B";
   header.style.color = "#e3f8e3";
   btnClaro.style.backgroundColor = "#191E2B";
@@ -131,72 +135,70 @@ btnClaro.addEventListener('click', () => {
   divPanelTextoColor.style.color = "#e3f8e3";
   divPanelTextoColorFondo.style.backgroundColor = "#394052";
   divPanelTextoColorFondo.style.color = "#e3f8e3";
-})
-
+});
 
 //                                   ************************* OCULTAR/APARECER PANELES DE TEXTO E IMAGEN ************************
 
-btnImg.addEventListener('click', () => {
-  panelImg.classList.remove('oculto');
-  panelText.classList.add('oculto');
-})
+btnImg.addEventListener("click", () => {
+  panelImg.classList.remove("oculto");
+  panelText.classList.add("oculto");
+});
 
-btnText.addEventListener('click', () => {
-  panelText.classList.remove('oculto');
-  panelImg.classList.add('oculto');
-})
+btnText.addEventListener("click", () => {
+  panelText.classList.remove("oculto");
+  panelImg.classList.add("oculto");
+});
 
 //                                     *************************************** PANEL IMAGEN ***************************************
 
-panelInputImagen.addEventListener('input', () => {
-  imgMeme.style= `background-image: url("${panelInputImagen.value}");"`; 
+panelInputImagen.addEventListener("input", () => {
+  imgMeme.style = `background-image: url("${panelInputImagen.value}");"`;
 });
 
- const colorFondoInput = document.getElementById('colorFondoInput');
- colorFondoInput.addEventListener('input', () => {
-   imgMeme.style.backgroundColor = colorFondoInput.value;
-})
-
-
-inputBrillo.addEventListener('input', () => {
-  imgMeme.style.filter = `brightness(${inputBrillo.value})`
+const colorFondoInput = document.getElementById("colorFondoInput");
+colorFondoInput.addEventListener("input", () => {
+  imgMeme.style.backgroundColor = colorFondoInput.value;
 });
 
-inputOpacidad.addEventListener('input', () => {
+inputBrillo.addEventListener("input", () => {
+  imgMeme.style.filter = `brightness(${inputBrillo.value})`;
+});
+
+inputOpacidad.addEventListener("input", () => {
   imgMeme.style.filter = `opacity(${inputOpacidad.value})`;
 });
 
-inputContraste.addEventListener('input', () => {
+inputContraste.addEventListener("input", () => {
   imgMeme.style.filter = `contrast(${inputContraste.value * 100}%)`;
-})
+});
 
-inputDesenfoque.addEventListener('input', () => {
+inputDesenfoque.addEventListener("input", () => {
   imgMeme.style.filter = `blur(${inputDesenfoque.value}px)`;
-})
+});
 
-inputEscala.addEventListener('input', () => {
+inputEscala.addEventListener("input", () => {
   imgMeme.style.filter = `grayscale(${inputEscala.value}%)`;
-})
+});
 
-inputSepia.addEventListener('input', () => {
+inputSepia.addEventListener("input", () => {
   imgMeme.style.filter = `sepia(${inputSepia.value}%)`;
-})
+});
 
-inputHUE.addEventListener('input', () => {
+inputHUE.addEventListener("input", () => {
   imgMeme.style.filter = `hue-rotate(${inputHUE.value * 100}deg)`;
-})
+});
 
-inputSaturado.addEventListener('input', () => {
+inputSaturado.addEventListener("input", () => {
   imgMeme.style.filter = `saturate(${inputSaturado.value}%)`;
-})
+});
 
-inputNegativo.addEventListener('input', () => {
+inputNegativo.addEventListener("input", () => {
   imgMeme.style.filter = `invert(${inputNegativo.value})`;
-})
+});
 
-btnReestablecerFiltros.addEventListener('click', () => {
+btnReestablecerFiltros.addEventListener("click", () => {
   inputBrillo.value = 1;
-  imgMeme.style.filter = `brightness(${inputBrillo.value})`
+  imgMeme.style.filter = `brightness(${inputBrillo.value})`;
   inputOpacidad.value = 1;
   imgMeme.style.filter = `opacity(${inputOpacidad.value})`;
   inputContraste.value = 100;
@@ -213,162 +215,140 @@ btnReestablecerFiltros.addEventListener('click', () => {
   imgMeme.style.filter = `saturate(${inputSaturado.value}%)`;
   inputNegativo.value = 0;
   imgMeme.style.filter = `invert(${inputNegativo.value})`;
-} )
-
+});
 
 //************inicio seccion panel texto************
 
-
-textareaTopText.addEventListener('input', () => {
+textareaTopText.addEventListener("input", () => {
   topText.innerHTML = textareaTopText.value;
 });
 
-textareaBottomText.addEventListener('input', () => {
+textareaBottomText.addEventListener("input", () => {
   bottomText.innerHTML = textareaBottomText.value;
 });
 
-cajaSinTopText.addEventListener('input', () => {
-  if(cajaSinTopText.checked) {
-      topText.style.display = 'none';
-      imgMeme.style.backgroundSize = "cover"
-    } else {
-      topText.style.display = 'block';
-    }
-})
+cajaSinTopText.addEventListener("input", () => {
+  if (cajaSinTopText.checked) {
+    topText.style.display = "none";
+    imgMeme.style.backgroundSize = "cover";
+  } else {
+    topText.style.display = "block";
+  }
+});
 
-cajaSinBottomText.addEventListener('input', () => {
-  if(cajaSinBottomText.checked) {
-      bottomText.style.display = 'none';
-      imgMeme.style.backgroundSize = "cover"
-    } else {
-      bottomText.style.display = 'block';
-    }
-})
+cajaSinBottomText.addEventListener("input", () => {
+  if (cajaSinBottomText.checked) {
+    bottomText.style.display = "none";
+    imgMeme.style.backgroundSize = "cover";
+  } else {
+    bottomText.style.display = "block";
+  }
+});
 
-
-
-const tipoDeFuente = document.getElementById('tipoDeFuente');
-tipoDeFuente.addEventListener('change', () => {
+const tipoDeFuente = document.getElementById("tipoDeFuente");
+tipoDeFuente.addEventListener("change", () => {
   topText.style.fontFamily = tipoDeFuente.value;
   bottomText.style.fontFamily = tipoDeFuente.value;
   console.log(tipoDeFuente.value);
-})
+});
 
-const tamanoInput = document.getElementById('tamanoInput');
-tamanoInput.addEventListener('input', () => {
+const tamanoInput = document.getElementById("tamanoInput");
+tamanoInput.addEventListener("input", () => {
   topText.style.fontSize = `${tamanoInput.value}px`;
   bottomText.style.fontSize = `${tamanoInput.value}px`;
-})
+});
 
-const alineacionIzquierda = document.getElementById('alineacionIzquierda');
-alineacionIzquierda.addEventListener('click', () => {
+const alineacionIzquierda = document.getElementById("alineacionIzquierda");
+alineacionIzquierda.addEventListener("click", () => {
   topText.style.textAlign = "left";
   bottomText.style.textAlign = "left";
-  alineacionIzquierda.classList.add('btnLadoSelected');
-  alineacionCentro.classList.remove('btnLadoSelected');
-  alineacionDerecha.classList.remove('btnLadoSelected');
-})
+  alineacionIzquierda.classList.add("btnLadoSelected");
+  alineacionCentro.classList.remove("btnLadoSelected");
+  alineacionDerecha.classList.remove("btnLadoSelected");
+});
 
-const alineacionCentro = document.getElementById('alineacionCentro');
-alineacionCentro.addEventListener('click', () => {
+const alineacionCentro = document.getElementById("alineacionCentro");
+alineacionCentro.addEventListener("click", () => {
   topText.style.textAlign = "center";
   bottomText.style.textAlign = "center";
-  alineacionCentro.classList.add('btnLadoSelected');
-  alineacionDerecha.classList.remove('btnLadoSelected');
-  alineacionIzquierda.classList.remove('btnLadoSelected');
-})
+  alineacionCentro.classList.add("btnLadoSelected");
+  alineacionDerecha.classList.remove("btnLadoSelected");
+  alineacionIzquierda.classList.remove("btnLadoSelected");
+});
 
-const alineacionDerecha = document.getElementById('alineacionDerecha');
-alineacionDerecha.addEventListener('click', () => {
+const alineacionDerecha = document.getElementById("alineacionDerecha");
+alineacionDerecha.addEventListener("click", () => {
   topText.style.textAlign = "right";
   bottomText.style.textAlign = "right";
-  alineacionDerecha.classList.add('btnLadoSelected');
-  alineacionIzquierda.classList.remove('btnLadoSelected');
-  alineacionCentro.classList.remove('btnLadoSelected');
-})
+  alineacionDerecha.classList.add("btnLadoSelected");
+  alineacionIzquierda.classList.remove("btnLadoSelected");
+  alineacionCentro.classList.remove("btnLadoSelected");
+});
 
-const textoColorInput = document.getElementById('textoColorInput');
-textoColorInput.addEventListener('input', () =>{
+const textoColorInput = document.getElementById("textoColorInput");
+textoColorInput.addEventListener("input", () => {
   topText.style.color = textoColorInput.value;
   bottomText.style.color = textoColorInput.value;
+});
 
-})
-
-const backgroundColorInput = document.getElementById('backgroundColorInput');
-backgroundColorInput.addEventListener('input', () =>{
-  if(!sinColorFondoTexto.checked){
+const backgroundColorInput = document.getElementById("backgroundColorInput");
+backgroundColorInput.addEventListener("input", () => {
+  if (!sinColorFondoTexto.checked) {
     topText.style.backgroundColor = backgroundColorInput.value;
     bottomText.style.backgroundColor = backgroundColorInput.value;
   }
-})
+});
 
-const sinColorFondoTexto = document.getElementById('sinColorFondoTexto');
-sinColorFondoTexto.addEventListener('input', ()=> {
-  if(sinColorFondoTexto.checked){
-    topText.style.backgroundColor = 'transparent';
-    bottomText.style.backgroundColor ='transparent';
-  }else{
+const sinColorFondoTexto = document.getElementById("sinColorFondoTexto");
+sinColorFondoTexto.addEventListener("input", () => {
+  if (sinColorFondoTexto.checked) {
+    topText.style.backgroundColor = "transparent";
+    bottomText.style.backgroundColor = "transparent";
+  } else {
     topText.style.backgroundColor = backgroundColorInput.value;
     bottomText.style.backgroundColor = backgroundColorInput.value;
   }
-})
+});
 
-const sinContorno = document.getElementById('sinContorno');
-const contornoClaro = document.getElementById('contornoClaro');
-const contornoOscuro = document.getElementById('contornoOscuro');
+const sinContorno = document.getElementById("sinContorno");
+const contornoClaro = document.getElementById("contornoClaro");
+const contornoOscuro = document.getElementById("contornoOscuro");
 
-sinContorno.addEventListener('click', () =>{
-topText.style.textShadow = 'none';
-bottomText.style.textShadow = 'none';
-sinContorno.classList.add('btnContornoSelected');
-contornoClaro.classList.remove('btnContornoSelected');
-contornoOscuro.classList.remove('btnContornoSelected');
-})
+sinContorno.addEventListener("click", () => {
+  topText.style.textShadow = "none";
+  bottomText.style.textShadow = "none";
+  sinContorno.classList.add("btnContornoSelected");
+  contornoClaro.classList.remove("btnContornoSelected");
+  contornoOscuro.classList.remove("btnContornoSelected");
+});
 
-contornoClaro.addEventListener('click',() =>{
-topText.style.textShadow = '3px 6px 7px white';
-bottomText.style.textShadow = '3px 6px 7px white';
-contornoClaro.classList.add('btnContornoSelected');
-sinContorno.classList.remove('btnContornoSelected');
-contornoOscuro.classList.remove('btnContornoSelected')
+contornoClaro.addEventListener("click", () => {
+  topText.style.textShadow = "2px 0 0 white, -2px 0 0 white, 0 2px 0 white, 0 -2px 0 white ";
+  bottomText.style.textShadow = "2px 0 0 white, -2px 0 0 white, 0 2px 0 white, 0 -2px 0 white";
+  contornoClaro.classList.add("btnContornoSelected");
+  sinContorno.classList.remove("btnContornoSelected");
+  contornoOscuro.classList.remove("btnContornoSelected");
+});
 
-})
-
-contornoOscuro.addEventListener('click',() =>{
-topText.style.textShadow = '3px 6px 7px black';
-bottomText.style.textShadow = '3px 6px 7px black';
-contornoOscuro.classList.add('btnContornoSelected');
-sinContorno.classList.remove('btnContornoSelected');
-contornoClaro.classList.remove('btnContornoSelected');
-})
-
-
-// const alineacionIzquierda = document.getElementById('alineacionIzquierda');
-// alineacionIzquierda.addEventListener('click', () => {
-//   topText.style.textAlign = "left";
-//   bottomText.style.textAlign = "left";
-//   alineacionIzquierda.classList.add('btnLadoSelected');
-//   alineacionCentro.classList.remove('btnLadoSelected');
-//   alineacionDerecha.classList.remove('btnLadoSelected');
-// })
+contornoOscuro.addEventListener("click", () => {
+  topText.style.textShadow = "2px 0 0 black, -2px 0 0 black, 0 2px 0 black, 0 -2px 0 black";
+  bottomText.style.textShadow = "2px 0 0 black, -2px 0 0 black, 0 2px 0 black, 0 -2px 0 black";
+  contornoOscuro.classList.add("btnContornoSelected");
+  sinContorno.classList.remove("btnContornoSelected");
+  contornoClaro.classList.remove("btnContornoSelected");
+});
 
 
-
-
-const espacioInput = document.getElementById('espacioInput');
-espacioInput.addEventListener('input', () =>{
+const espacioInput = document.getElementById("espacioInput");
+espacioInput.addEventListener("input", () => {
   topText.style.padding = `${espacioInput.value}px`;
   bottomText.style.padding = `${espacioInput.value}px`;
   console.log(espacioInput.value);
-})
+});
 
-
-const interlineadoInput = document.getElementById('interlineadoInput');
-interlineadoInput.addEventListener('change',() =>{
-  topText.style.lineHeight = interlineadoInput.value; 
+const interlineadoInput = document.getElementById("interlineadoInput");
+interlineadoInput.addEventListener("change", () => {
+  topText.style.lineHeight = interlineadoInput.value;
   bottomText.style.lineHeight = interlineadoInput.value;
   console.log(interlineadoInput.value);
-})
-
-
-
+});
