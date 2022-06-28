@@ -155,9 +155,25 @@ panelInputImagen.addEventListener("input", () => {
   imgMeme.style = `background-image: url("${panelInputImagen.value}");"`;
 });
 
+<<<<<<< HEAD
 const colorFondoInput = document.getElementById("colorFondoInput");
 colorFondoInput.addEventListener("input", () => {
   imgMeme.style.backgroundColor = colorFondoInput.value;
+=======
+ const colorFondoInput = document.getElementById('colorFondoInput');
+ colorFondoInput.addEventListener('input', () => {
+   imgMeme.style.backgroundColor = colorFondoInput.value;
+})
+
+const modoFondo = document.getElementById('modoFondo');
+modoFondo.addEventListener('input', () => {
+  imgMeme.style.backgroundBlendMode = modoFondo.value;
+})
+
+
+inputBrillo.addEventListener('input', () => {
+  imgMeme.style.filter = `brightness(${inputBrillo.value})`
+>>>>>>> b02fbed531d25d67c88035355c48352f7a9cbd19
 });
 
 inputBrillo.addEventListener("input", () => {
@@ -322,6 +338,7 @@ sinContorno.addEventListener("click", () => {
   contornoOscuro.classList.remove("btnContornoSelected");
 });
 
+<<<<<<< HEAD
 contornoClaro.addEventListener("click", () => {
   topText.style.textShadow = "2px 0 0 white, -2px 0 0 white, 0 2px 0 white, 0 -2px 0 white ";
   bottomText.style.textShadow = "2px 0 0 white, -2px 0 0 white, 0 2px 0 white, 0 -2px 0 white";
@@ -337,6 +354,24 @@ contornoOscuro.addEventListener("click", () => {
   sinContorno.classList.remove("btnContornoSelected");
   contornoClaro.classList.remove("btnContornoSelected");
 });
+=======
+contornoClaro.addEventListener('click',() =>{
+topText.style.textShadow = '-1px 0 white, 0 1px white, 1px 0 white, 0 -1px white';
+bottomText.style.textShadow = '-1px 0 white, 0 1px white, 1px 0 white, 0 -1px white';
+contornoClaro.classList.add('btnContornoSelected');
+sinContorno.classList.remove('btnContornoSelected');
+contornoOscuro.classList.remove('btnContornoSelected')
+
+})
+
+contornoOscuro.addEventListener('click',() =>{
+topText.style.textShadow = '-1px 0 black, 0 1px black, 1px 0 black, 0 -1px black';
+bottomText.style.textShadow = '-1px 0 black, 0 1px black, 1px 0 black, 0 -1px black';
+contornoOscuro.classList.add('btnContornoSelected');
+sinContorno.classList.remove('btnContornoSelected');
+contornoClaro.classList.remove('btnContornoSelected');
+})
+>>>>>>> b02fbed531d25d67c88035355c48352f7a9cbd19
 
 
 const espacioInput = document.getElementById("espacioInput");

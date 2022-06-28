@@ -64,11 +64,11 @@
                                                 ****************************** -->
       
         <aside class="controlAside" id="aside">
+            <button class="botonCerrar" id="btnCerrar" name="boton cerrar"><i class="fa-solid fa-xmark"></i></button>
             <section  class="imagenPanel" id="panelImg" aria-label="panel de imagen">
 
                 <!--inicio url -->
-
-                <button class="botonCerrar" name="boton cerrar"><i class="fa-solid fa-xmark"></i></button>
+                
                 <h2 class="tituloPanelImagen">IMAGEN</h2>
                 <div class="panelUrlImagen">
                     <p class="urlTextoImagen">URL</p>
@@ -87,12 +87,12 @@
                         </div>
                         <div class="modoSelector" id="eleccionDeModo">
                             <select id="modoFondo" class="modoColorFondo" aria-label="modo de fondo de imagen">
-                                <option id="ninguno" aria-label="opcion ninguno">Ninguno</option>
-                                <option id="lighten" aria-label="opcion aclarar">Aclarar</option>
-                                <option id="darken" aria-label="opcion oscurecer">Oscurecer</option>
-                                <option id="difference" aria-label="opcion diferencia">Diferencia</option>
-                                <option id="luminosity" aria-label="opcion luminosidad">Luminosidad</option>
-                                <option id="multiply" aria-label="opcion multiplicar">Multiplicar</option>
+                                <option value="unset" aria-label="opcion ninguno">Ninguno</option>
+                                <option value="lighten" aria-label="opcion aclarar">Aclarar</option>
+                                <option value="darken" aria-label="opcion oscurecer">Oscurecer</option>
+                                <option value="difference" aria-label="opcion diferencia">Diferencia</option>
+                                <option value="luminosity" aria-label="opcion luminosidad">Luminosidad</option>
+                                <option value="multiply" aria-label="opcion multiplicar">Multiplicar</option>
                             </select>
                         </div>
                     </div>
@@ -140,7 +140,7 @@
                     </div>
                 </section>
 
-                <button class="reestablecerFiltros" id="btnReestablecerFiltros">Reestablecer filtros</button>
+                <button class="reestablecerFiltros" id="btnReestablecerFiltros" aria-label="reestablecer filtros">Reestablecer filtros</button>
 
                                  <!--final filtros-->
 
@@ -235,8 +235,8 @@
                                 </div>    
                             </div>
                             <div class="sinTexto">
-                                <input type="checkbox" class="cajaSelectora" id="sinColorFondoTexto">
-                                <label for="sinColorDeFondoDeTexto">
+                                <label for="sinColorDeFondoDeTexto" class="lebelCajaSelectora">
+                                    <input type="checkbox" class="cajaSelectora" id="sinColorFondoTexto" name="sinColorDeFondoDeTexto"/>
                                     Fondo transparente
                                 </label>
                             </div>
