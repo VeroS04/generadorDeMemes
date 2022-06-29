@@ -87,6 +87,7 @@ body {
 
 .mainContenedor {
   background-color: #2d3443;
+  height: 87.3vh;
   color: #e3f8e3;
   display: flex;
   flex-direction: column;
@@ -96,7 +97,7 @@ body {
 }
 
 .memeContenedor {
-  width: 40%;
+  width: 35%;
   background-color: #191e2b;
   margin: 2%;
   height: 60.2vh;
@@ -140,7 +141,7 @@ body {
   border-radius: 5px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 
 .botonDescargar:hover{
@@ -151,27 +152,30 @@ body {
                                             INICIO PANEL IMAGEN
      ************************************************************************************************ */
 
-.imagenPanel {
-  width: 18%;
+
+.controlAside {
+  background-color: #272e3f;
+  width: 16%;
   height: 100%;
   position: absolute;
   right: 00%;
   top: 00%;
   padding: 1%;
-  background-color: #272e3f;
-  color: #e3f8e3;
 }
 
 .botonCerrar {
-  position: relative;
-  left: 95%;
-  top: auto;
+  margin-left: 90%;
   font-size: 1em;
-  width: 5%;
+  width: 8%;
   background-color: #272e3f;
   color: #e3f8e3;
   border: none;
   display: none;
+}
+
+.imagenPanel {
+  background-color: #272e3f;
+  color: #e3f8e3;
 }
 
 .tituloPanelImagen {
@@ -231,16 +235,13 @@ body {
   border: 0;
   outline: 0;
   display: block;
-  margin-top: 5%;
-  margin-left: 5%;
-  width: 28%;
+  margin: auto;
+  width: 25%;
   border-radius: 50%;
-  
 }
 
 .spanFondo {
-  margin-top: 10%;
-  margin-left: 2%;
+margin: auto;
 }
 
 .modoSelector {
@@ -298,12 +299,6 @@ body {
      ************************************************************************************************ */
 
 .seccionPanelTexto {
-  width: 14%;
-  height: 100%;
-  position: absolute;
-  right: 00%;
-  top: 00%;
-  padding: 1%;
   background-color: #272e3f;
   color: #e3f8e3;
 }
@@ -311,13 +306,12 @@ body {
 .panelTextTitulo {
   text-align: center;
   font-size: 1.2em;
-  margin-top: 5%;
 }
 
 .panelControlTextTitulo {
   font-size: 0.8em;
   font: bold;
-  margin-top: 15%;
+  margin-top: 7%;
 }
 
 .textareaImput {
@@ -483,15 +477,52 @@ body {
 
 
 @media screen and (max-width: 1300px) and (min-width: 700px){
-  .imagenPanel{
+
+  .mainContenedor {
+    height: 87vh;
+  }
+
+  .memeContenedor{
+    width: 48%;
+  }
+
+  .controlAside{
+    width: 26%;
+    display: none;
+  }
+
+  .imagenPanel, .seccionPanelTexto{
+    display: none;
+  }
+  .botonCerrar {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 980px) and (min-width: 699px){
+  .memeContenedor{
+    width: 60%;
+  }
+  .controlAside{
+    width: 28%;
+    padding: 1%;
     display: none;
   }
 }
 
 @media screen and (max-width: 700px) and (min-width: 200px){
 
-  .imagenPanel, .seccionPanelTexto{
+  .memeContenedor{
+    width: 80%;
+  }
+  .controlAside{
     width: 100%;
     padding: 10%;
+    display: none;
   }
+  .botonCerrar {
+    display: block;
+  }
+
+  
 }

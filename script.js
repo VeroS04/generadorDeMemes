@@ -35,13 +35,9 @@ const opcionOscurecer = document.getElementById("opcionOscurecer");
 const opcionDiferencia = document.getElementById("opcionDiferencia");
 const opcionLuminosidad = document.getElementById("opcionLuminosidad");
 const opcionMultiplicar = document.getElementById("opcionMultiplicar");
-const btnReestablecerFiltros = document.getElementById(
-  "btnReestablecerFiltros"
-);
+const btnReestablecerFiltros = document.getElementById("btnReestablecerFiltros");
 const divPanelTextoColor = document.getElementById("divPanelTextoColor");
-const divPanelTextoColorFondo = document.getElementById(
-  "divPanelTextoColorFondo"
-);
+const divPanelTextoColorFondo = document.getElementById("divPanelTextoColorFondo");
 
 //                                     *************************************** MODO OSCURO/CLARO ***************************************
 
@@ -50,8 +46,12 @@ btnOscuro.addEventListener("click", () => {
   btnOscuro.classList.add("oculto");
   header.style.backgroundColor = "#dce4dc";
   header.style.color = "#191E2B";
+  aside.style.backgroundColor = "#f0faf0";
+  aside.style.color = "#191E2B";
   btnClaro.style.backgroundColor = "#e3f8e3";
   btnOscuro.style.backgroundColor = "#e3f8e3";
+  btnCerrar.style.backgroundColor = "#e3f8e3";
+  btnCerrar.style.color = "#191E2B";
   btnImg.style.backgroundColor = "#e3f8e3";
   btnText.style.backgroundColor = "#e3f8e3";
   btnClaro.style.color = "#191E2B";
@@ -89,6 +89,16 @@ btnOscuro.addEventListener("click", () => {
   divPanelTextoColor.style.color = "#191E2B";
   divPanelTextoColorFondo.style.backgroundColor = "#dce4dc";
   divPanelTextoColorFondo.style.color = "#191E2B";
+  sinContorno.style.backgroundColor = "#dce4dc";
+  sinContorno.style.color = "#191E2B";
+  contornoClaro.style.backgroundColor = "#dce4dc";
+  contornoClaro.style.color = "#191E2B";
+  contornoOscuro.style.backgroundColor = "#dce4dc";
+  contornoOscuro.style.color = "#191E2B";
+  espacioInput.style.backgroundColor = "#dce4dc";
+  espacioInput.style.color = "#191E2B";
+  interlineadoInput.style.backgroundColor = "#dce4dc";
+  interlineadoInput.style.color = "#191E2B";
 });
 
 btnClaro.addEventListener("click", () => {
@@ -96,12 +106,16 @@ btnClaro.addEventListener("click", () => {
   btnOscuro.classList.remove("oculto");
   header.style.backgroundColor = "#191E2B";
   header.style.color = "#e3f8e3";
+  aside.style.backgroundColor = "#272e3f";
+  aside.style.color = "#e3f8e3";
   btnClaro.style.backgroundColor = "#191E2B";
   btnOscuro.style.backgroundColor = "#191E2B";
   btnImg.style.backgroundColor = "#191E2B";
   btnText.style.backgroundColor = "#191E2B";
   btnClaro.style.color = "#e3f8e3";
   btnOscuro.style.color = "#e3f8e3";
+  btnCerrar.style.backgroundColor = "#191E2B";
+  btnCerrar.style.color = "#e3f8e3";
   btnImg.style.color = "#e3f8e3";
   btnText.style.color = "#e3f8e3";
   main.style.backgroundColor = "#2d3443";
@@ -135,6 +149,16 @@ btnClaro.addEventListener("click", () => {
   divPanelTextoColor.style.color = "#e3f8e3";
   divPanelTextoColorFondo.style.backgroundColor = "#394052";
   divPanelTextoColorFondo.style.color = "#e3f8e3";
+  sinContorno.style.backgroundColor = "#394052";
+  sinContorno.style.color = "#e3f8e3";
+  contornoClaro.style.backgroundColor = "#394052";
+  contornoClaro.style.color = "#e3f8e3";
+  contornoOscuro.style.backgroundColor = "#394052";
+  contornoOscuro.style.color = "#e3f8e3";
+  espacioInput.style.backgroundColor = "#394052";
+  espacioInput.style.color = "#e3f8e3";
+  interlineadoInput.style.backgroundColor = "#394052";
+  interlineadoInput.style.color = "#e3f8e3";
 });
 
 //                                   ************************* OCULTAR/APARECER PANELES DE TEXTO E IMAGEN ************************
@@ -142,23 +166,42 @@ btnClaro.addEventListener("click", () => {
 btnImg.addEventListener("click", () => {
   panelImg.classList.remove("oculto");
   panelText.classList.add("oculto");
+  panelImg.style.display = 'block';
+  panelText.style.display = 'none';
+  aside.style.display = 'block';
 });
 
 btnText.addEventListener("click", () => {
   panelText.classList.remove("oculto");
   panelImg.classList.add("oculto");
+  panelText.style.display = 'block';
+  panelImg.style.display = 'none';
+  aside.style.display = 'block';
 });
 
 //                                     *************************************** PANEL IMAGEN ***************************************
+
+const btnCerrar = document.getElementById('btnCerrar');
+btnCerrar.addEventListener('click', () => {
+panelImg.classList.add("oculto");
+panelText.classList.add("oculto");
+aside.style.display = 'none';
+})
+
 
 panelInputImagen.addEventListener("input", () => {
   imgMeme.style = `background-image: url("${panelInputImagen.value}");"`;
 });
 
-const colorFondoInput = document.getElementById("colorFondoInput");
-colorFondoInput.addEventListener("input", () => {
+const colorFondoInput = document.getElementById('colorFondoInput');
+colorFondoInput.addEventListener('input', () => {
   imgMeme.style.backgroundColor = colorFondoInput.value;
-});
+})
+
+const modoFondo = document.getElementById('modoFondo');
+modoFondo.addEventListener('input', () => {
+ imgMeme.style.backgroundBlendMode = modoFondo.value;
+})
 
 inputBrillo.addEventListener("input", () => {
   imgMeme.style.filter = `brightness(${inputBrillo.value})`;
