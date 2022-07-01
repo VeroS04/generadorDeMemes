@@ -393,5 +393,18 @@ const interlineadoInput = document.getElementById("interlineadoInput");
 interlineadoInput.addEventListener("change", () => {
   topText.style.lineHeight = interlineadoInput.value;
   bottomText.style.lineHeight = interlineadoInput.value;
-  console.log(interlineadoInput.value);
+});
+
+
+const botonDescargar = document.getElementById("botonDescargar");
+botonDescargar.addEventListener("click", () =>{
+  var memeContenedor = document.getElementById("memeContenedor");
+  html2canvas(memeContenedor).then(function (canvas) {	
+    	var anchorTag = document.createElement("a");
+			document.body.appendChild(anchorTag);
+			anchorTag.download = "filename.jpg";
+			anchorTag.href = canvas.toDataURL();
+			anchorTag.target = '_blank';
+			anchorTag.click();
+		});
 });
