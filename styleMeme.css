@@ -228,6 +228,10 @@ body {
   display: flex;
 }
 
+.btnColorFondo:hover{
+  background-color: #464d5f;
+}
+
 .btnColorFondo:focus {
   background-color: #464d5f;
 }
@@ -260,7 +264,7 @@ margin: auto;
   color: #e3f8e3;
 }
 .modoColorFondo:hover {
-  background-color: #999ba0;
+  background-color: #464d5f;
 }
 
 .selectorDeFiltro {
@@ -414,6 +418,10 @@ margin: auto;
   display: flex;
   justify-content: space-evenly;
   padding: 5%;
+}
+
+.colorTexto:hover{
+background-color: #464d5f;
 }
 
 .spanTextoColor {
