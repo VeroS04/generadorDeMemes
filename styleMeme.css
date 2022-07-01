@@ -16,7 +16,7 @@ body {
      ************************************************************************************************ */
 
 .headEstilo {
-  height: 5em;
+  height: 15vh;
   font-size: 1.5em;
   display: flex;
   justify-content: center;
@@ -34,7 +34,7 @@ body {
 }
 
 .headerContenedorDeBotones {
-  width: 35%;
+  width: 48%;
   margin: auto;
 }
 
@@ -46,7 +46,6 @@ body {
   border: none;
   border-radius: 0.5em;
   font: bold;
-  /* color: #dce4dc; */
   background-blend-mode: lighten;
 }
 
@@ -87,7 +86,7 @@ body {
 
 .mainContenedor {
   background-color: #2d3443;
-  height: 87.3vh;
+  height: 85vh;
   color: #e3f8e3;
   display: flex;
   flex-direction: column;
@@ -105,6 +104,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  position: relative;
 }
 
 .textTop,
@@ -116,10 +116,9 @@ body {
   margin: 0%;
   text-align: center;
   font-size: 2.5em;
-  padding: 3% 0%;
+  padding: 3%;
   font-weight: bold;
-  padding-right: 3%;
-  padding-left: 3%;
+  position: static;
 }
 
 .imgMeme {
@@ -134,8 +133,8 @@ body {
 }
 
 .botonDescargar {
-  width: 10%;
-  padding: 15px;
+  width: 12%;
+  padding: 10px;
   margin-top: 1%;
   background-color: #2e7d32;
   color: white;
@@ -163,7 +162,6 @@ body {
   right: 00%;
   top: 00%;
   padding: 1%;
-  display: block;
 }
 
 .botonCerrar {
@@ -173,7 +171,8 @@ body {
   background-color: #272e3f;
   color: #e3f8e3;
   border: none;
-  display: none;
+  background-color: transparent;
+  color: transparent;
 }
 
 .imagenPanel {
@@ -266,6 +265,7 @@ margin: auto;
   background-color: #394052;
   color: #e3f8e3;
 }
+
 .modoColorFondo:hover {
   background-color: #464d5f;
 }
@@ -279,14 +279,22 @@ margin: auto;
 
 .valoresDeContrastes {
   margin-bottom: 2%;
-  margin-top: 5%;
+  margin-top: 8%;
   display: flex;
   flex-direction: column;
 }
 
 .inputContrastes {
   font-size: 1em;
-  margin-top: 5%;
+  color: #e3f8e3;
+}
+
+input[type='range']{
+  background-color: #5a5d68;
+  appearance: none;
+  border-radius: 10px;
+  height: 0.5em;
+  margin-top: 1.2em;
 }
 
 .reestablecerFiltros {
@@ -323,7 +331,7 @@ margin: auto;
 }
 
 .textareaImput {
-  padding: 6%;
+  padding: 4%;
   font-size: 0.9em;
   background-color: #394052;
   color: #e3f8e3;
@@ -346,7 +354,7 @@ margin: auto;
   color: #e3f8e3;
   margin-top: 3%;
   width: 100%;
-  padding: 6%;
+  padding: 3%;
   border-radius: 3px;
   border: none;
 }
@@ -396,9 +404,14 @@ margin: auto;
   background-color: #8b97b6;
 }
 
+.panelControlTexto {
+  margin-top: 10%
+}
+
 .colorTextoContenedor {
   display: flex;
   flex-wrap: wrap;
+  margin-top: 15%;
 }
 
 .divPanelTextoColor {
@@ -431,7 +444,7 @@ background-color: #464d5f;
 .btnsContorno{
   width: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-around;;
 }
 
 .btnContorno{
@@ -439,7 +452,7 @@ background-color: #464d5f;
   color: #e3f8e3;
   border-radius: var(--border-radius);
   font-size: 0.8em;
-  padding: 5%;
+  padding: 4%;
   margin-top: 4%;
   border-radius: 5px;
   border: none;
@@ -453,14 +466,12 @@ background-color: #464d5f;
   background-color:  #464d5f;
 }
 
-
-
 .espacioInput{
   background-color: #394052;
   color: #e3f8e3;
   margin-top: 3%;
   width: 100%;
-  padding: 6%;
+  padding: 4%;
   border-radius: 3px;
   border: none;
 }
@@ -474,7 +485,7 @@ background-color: #464d5f;
   color: #e3f8e3;
   margin-top: 3%;
   width: 100%;
-  padding: 6%;
+  padding: 4%;
   border-radius: 3px;
   border: none;
 }
@@ -485,6 +496,10 @@ background-color: #464d5f;
 
 
 @media screen and (max-width: 1300px) and (min-width: 700px){
+
+  .headerContenedorDeBotones {
+    width: 60%;
+  }
 
   .mainContenedor {
     height: 87vh;
@@ -499,25 +514,31 @@ background-color: #464d5f;
     display: none;
   }
 
+  .botonCerrar {
+    background-color: #272e3f;
+    color: #e3f8e3;
+  }
+
   .imagenPanel, .seccionPanelTexto{
     display: none;
   }
-  .botonCerrar {
-    display: block;
-  }
 
   .botonDescargar{
-    width: 15%;
+    width: 16%;
   }
 }
 
 @media screen and (max-width: 980px) and (min-width: 699px){
+
+  .headerContenedorDeBotones {
+    width: 80%;
+  }
+
   .memeContenedor{
     width: 60%;
   }
   .controlAside{
     width: 28%;
-    padding: 1%;
     display: none;
   }
 
@@ -528,16 +549,35 @@ background-color: #464d5f;
 
 @media screen and (max-width: 700px) and (min-width: 200px){
 
+  .headerContenedorDeBotones{
+    width: 100%;
+  }
+
+  .boton {
+    width: 25%;
+  }
+
+  .botonModoClaro, .botonModoOscuro {
+    width: 41%;
+  }
+
   .memeContenedor{
-    width: 80%;
+    width: 90%;
   }
   .controlAside{
     width: 100%;
+    height: 150vh;
     padding: 10%;
     display: none;
   }
+
   .botonCerrar {
-    display: block;
+    background-color: #272e3f;
+    color: #e3f8e3;
+  }
+
+  .imagenPanel, .seccionPanelTexto{
+    display: none;
   }
 
   .botonDescargar{
@@ -546,5 +586,9 @@ background-color: #464d5f;
 
   .textTop, .textBottom{
     font-size: 2em;
+  }
+
+  .btnContorno{
+    width: 20%;
   }
 }

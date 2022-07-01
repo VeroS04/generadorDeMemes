@@ -183,8 +183,6 @@ btnText.addEventListener("click", () => {
 
 const btnCerrar = document.getElementById('btnCerrar');
 btnCerrar.addEventListener('click', () => {
-// panelImg.classList.add("oculto");
-// panelText.classList.add("oculto");
 aside.style.display = 'none';
 })
 
@@ -346,10 +344,15 @@ const sinColorFondoTexto = document.getElementById("sinColorFondoTexto");
 sinColorFondoTexto.addEventListener("input", () => {
   if (sinColorFondoTexto.checked) {
     topText.style.backgroundColor = "transparent";
+    topText.style.position= "absolute";
     bottomText.style.backgroundColor = "transparent";
+    bottomText.style.position= "absolute";
+    bottomText.style.top="85%"
   } else {
     topText.style.backgroundColor = backgroundColorInput.value;
+    topText.style.position="static";
     bottomText.style.backgroundColor = backgroundColorInput.value;
+    bottomText.style.position="static";
   }
 });
 
@@ -409,8 +412,8 @@ botonDescargar.addEventListener("click", () =>{
 		});
 });
 
-window.addEventListener('resize', () => {
-  if(window.innerWidth >= 1300){
-    aside.style.display = 'block';
-  }
-})
+// window.addEventListener('resize', () => {
+//   if(window.innerWidth >= 1300){
+//     aside.style.display = 'block';
+//   }
+// })
