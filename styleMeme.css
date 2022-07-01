@@ -161,6 +161,7 @@ body {
   right: 00%;
   top: 00%;
   padding: 1%;
+  display: block;
 }
 
 .botonCerrar {

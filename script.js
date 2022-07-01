@@ -183,8 +183,8 @@ btnText.addEventListener("click", () => {
 
 const btnCerrar = document.getElementById('btnCerrar');
 btnCerrar.addEventListener('click', () => {
-panelImg.classList.add("oculto");
-panelText.classList.add("oculto");
+// panelImg.classList.add("oculto");
+// panelText.classList.add("oculto");
 aside.style.display = 'none';
 })
 
@@ -408,3 +408,9 @@ botonDescargar.addEventListener("click", () =>{
 			anchorTag.click();
 		});
 });
+
+window.addEventListener('resize', () => {
+  if(window.innerWidth >= 1300){
+    aside.style.display = 'block';
+  }
+})
