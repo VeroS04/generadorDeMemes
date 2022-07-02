@@ -184,6 +184,7 @@ btnText.addEventListener("click", () => {
 const btnCerrar = document.getElementById('btnCerrar');
 btnCerrar.addEventListener('click', () => {
 aside.style.display = 'none';
+
 })
 
 
@@ -412,8 +413,8 @@ botonDescargar.addEventListener("click", () =>{
 		});
 });
 
-// window.addEventListener('resize', () => {
-//   if(window.innerWidth >= 1300){
-//     aside.style.display = 'block';
-//   }
-// })
+  // window.addEventListener('resize', () => {
+  // if(window.innerWidth >= 1300){
+  // aside.style.display = 'block';
+  // }
+  // })
