@@ -333,7 +333,6 @@ sinColorFondoTexto.addEventListener("input", () => {
     topText.style.position="static";
     bottomText.style.backgroundColor = backgroundColorInput.value;
     bottomText.style.position="static";
-    bottomText.style.top="85%"
   }
 });
 
