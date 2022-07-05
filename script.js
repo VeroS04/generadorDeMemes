@@ -201,42 +201,6 @@ modoFondo.addEventListener('input', () => {
  imgMeme.style.backgroundBlendMode = modoFondo.value;
 })
 
-inputBrillo.addEventListener("input", () => {
-   imgMeme.style.filter = `brightness(${inputBrillo.value})`;
- });
-
-//  inputOpacidad.addEventListener("input", () => {
-//    imgMeme.style.filter = `opacity(${inputOpacidad.value})`;
-//  });
-
-//  inputContraste.addEventListener("input", () => {
-//   imgMeme.style.filter = `contrast(${inputContraste.value * 100}%)`;
-// });
-
-//  inputDesenfoque.addEventListener("input", () => {
-//    imgMeme.style.filter = `blur(${inputDesenfoque.value}px)`;
-// });
-
-// inputEscala.addEventListener("input", () => {
-//   imgMeme.style.filter = `grayscale(${inputEscala.value}%)`;
-// });
-
-//  inputSepia.addEventListener("input", () => {
-//   imgMeme.style.filter = `sepia(${inputSepia.value}%)`;
-//  });
-
-// inputHUE.addEventListener("input", () => {
-//   imgMeme.style.filter = `hue-rotate(${inputHUE.value * 100}deg)`;
-// });
-
-//  inputSaturado.addEventListener("input", () => {
-//    imgMeme.style.filter = `saturate(${inputSaturado.value}%)`;
-// });
-
-// inputNegativo.addEventListener("input", () => {
-//  imgMeme.style.filter = `invert(${inputNegativo.value})`;
-// });
-
 const filtro = () => {
   imgMeme.style.filter = `brightness(${inputBrillo.value}) opacity(${inputOpacidad.value}) contrast(${inputContraste.value * 100}%)
   blur(${inputDesenfoque.value}px) grayscale(${inputEscala.value}%) sepia(${inputSepia.value}%) 
@@ -252,10 +216,6 @@ inputSepia.addEventListener('input', filtro);
 inputHUE.addEventListener('input', filtro);
 inputSaturado.addEventListener('input', filtro);
 inputNegativo.addEventListener('input', filtro);
-
-
-
-
 
 btnReestablecerFiltros.addEventListener("click", () => {
   inputBrillo.value = 1;
@@ -373,6 +333,7 @@ sinColorFondoTexto.addEventListener("input", () => {
     topText.style.position="static";
     bottomText.style.backgroundColor = backgroundColorInput.value;
     bottomText.style.position="static";
+    bottomText.style.top="85%"
   }
 });
 
