@@ -203,40 +203,60 @@ modoFondo.addEventListener('input', () => {
 })
 
 inputBrillo.addEventListener("input", () => {
-  imgMeme.style.filter = `brightness(${inputBrillo.value})`;
-});
+   imgMeme.style.filter = `brightness(${inputBrillo.value})`;
+ });
 
-inputOpacidad.addEventListener("input", () => {
-  imgMeme.style.filter = `opacity(${inputOpacidad.value})`;
-});
+//  inputOpacidad.addEventListener("input", () => {
+//    imgMeme.style.filter = `opacity(${inputOpacidad.value})`;
+//  });
 
-inputContraste.addEventListener("input", () => {
-  imgMeme.style.filter = `contrast(${inputContraste.value * 100}%)`;
-});
+//  inputContraste.addEventListener("input", () => {
+//   imgMeme.style.filter = `contrast(${inputContraste.value * 100}%)`;
+// });
 
-inputDesenfoque.addEventListener("input", () => {
-  imgMeme.style.filter = `blur(${inputDesenfoque.value}px)`;
-});
+//  inputDesenfoque.addEventListener("input", () => {
+//    imgMeme.style.filter = `blur(${inputDesenfoque.value}px)`;
+// });
 
-inputEscala.addEventListener("input", () => {
-  imgMeme.style.filter = `grayscale(${inputEscala.value}%)`;
-});
+// inputEscala.addEventListener("input", () => {
+//   imgMeme.style.filter = `grayscale(${inputEscala.value}%)`;
+// });
 
-inputSepia.addEventListener("input", () => {
-  imgMeme.style.filter = `sepia(${inputSepia.value}%)`;
-});
+//  inputSepia.addEventListener("input", () => {
+//   imgMeme.style.filter = `sepia(${inputSepia.value}%)`;
+//  });
 
-inputHUE.addEventListener("input", () => {
-  imgMeme.style.filter = `hue-rotate(${inputHUE.value * 100}deg)`;
-});
+// inputHUE.addEventListener("input", () => {
+//   imgMeme.style.filter = `hue-rotate(${inputHUE.value * 100}deg)`;
+// });
 
-inputSaturado.addEventListener("input", () => {
-  imgMeme.style.filter = `saturate(${inputSaturado.value}%)`;
-});
+//  inputSaturado.addEventListener("input", () => {
+//    imgMeme.style.filter = `saturate(${inputSaturado.value}%)`;
+// });
 
-inputNegativo.addEventListener("input", () => {
-  imgMeme.style.filter = `invert(${inputNegativo.value})`;
-});
+// inputNegativo.addEventListener("input", () => {
+//  imgMeme.style.filter = `invert(${inputNegativo.value})`;
+// });
+
+const filtro = () => {
+  imgMeme.style.filter = `brightness(${inputBrillo.value}) opacity(${inputOpacidad.value}) contrast(${inputContraste.value * 100}%)
+  blur(${inputDesenfoque.value}px) grayscale(${inputEscala.value}%) sepia(${inputSepia.value}%) 
+  hue-rotate(${inputHUE.value * 100}deg) saturate(${inputSaturado.value}%) invert(${inputNegativo.value})`;
+}
+
+inputBrillo.addEventListener('input', filtro);
+inputOpacidad.addEventListener('input', filtro);
+inputContraste.addEventListener('input', filtro);
+inputDesenfoque.addEventListener('input', filtro);
+inputEscala.addEventListener('input', filtro);
+inputSepia.addEventListener('input', filtro);
+inputHUE.addEventListener('input', filtro);
+inputSaturado.addEventListener('input', filtro);
+inputNegativo.addEventListener('input', filtro);
+
+
+
+
 
 btnReestablecerFiltros.addEventListener("click", () => {
   inputBrillo.value = 1;
