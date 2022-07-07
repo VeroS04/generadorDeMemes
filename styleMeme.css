@@ -689,8 +689,8 @@ input[type='range']{
   .controlAside{
     width: 100%;
     height: auto;
- 
     display: none;
+    padding: 5%;
   }
 
   .imagenPanel, .seccionPanelTexto{
