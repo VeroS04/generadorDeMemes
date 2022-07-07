@@ -595,7 +595,8 @@ background-color: #464d5f;
     font-size: 2em;
   }
 
-  .botonModoClaro, .botonModoOscuro, .botonTexto, .botonImg {
+
+  .botonModoClaro, .botonModoOscuro{
     width: 41%;
   }
 
@@ -626,10 +627,6 @@ background-color: #464d5f;
 
 .panelInputImagen {
   padding: 8%;
-}
-
-.panelInputImagen:focus, .textareaImput:focus{
-  position: fixed;
 }
 
   .btnContorno{
