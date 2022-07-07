@@ -187,8 +187,9 @@ aside.style.display = 'none';
 })
 
 
-panelInputImagen.addEventListener("input", () => {
-  imgMeme.style = `background-image: url("${panelInputImagen.value}");"`;
+panelInputImagen.addEventListener("input", (event) => {
+  const mostrarImage = event.target.value;
+  imgMeme.style = `background-image: url("${mostrarImage}");"`;
 });
 
 const colorFondoInput = document.getElementById('colorFondoInput');
@@ -240,12 +241,14 @@ btnReestablecerFiltros.addEventListener("click", () => {
 
 //************inicio seccion panel texto************
 
-textareaTopText.addEventListener("input", () => {
-  topText.innerHTML = textareaTopText.value;
+textareaTopText.addEventListener("input", (event) => {
+  const textoIngresado =  event.target.value;
+  topText.innerHTML = textoIngresado;
 });
 
-textareaBottomText.addEventListener("input", () => {
-  bottomText.innerHTML = textareaBottomText.value;
+textareaBottomText.addEventListener("input", (event) => {
+  const textoIngresado =  event.target.value;
+  bottomText.innerHTML = textoIngresado;
 });
 
 cajaSinTopText.addEventListener("input", () => {
@@ -390,8 +393,10 @@ saveAs(blob, 'memeContenedor.png')))
   window.addEventListener('resize', () => {
     if (window.innerWidth < 1300){
     aside.style.display = 'none';
+    btnCerrar.style.display ='block';
   }
   if(window.innerWidth >= 1300){
   aside.style.display = 'block';
+  btnCerrar.style.display ='none';
   }
   })
