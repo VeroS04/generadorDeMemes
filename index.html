@@ -76,7 +76,7 @@
                 <h2 class="tituloPanelImagen">IMAGEN</h2>
                 <div class="panelUrlImagen">
                     <p class="urlTextoImagen">URL</p>
-                    <input class="panelInputImagen" id="panelInputImagen" type="text" aria-label="url de imagen">
+                    <input class="panelInputImagen color" id="panelInputImagen" type="text" aria-label="url de imagen">
                 </div>
                                      <!--final url-->
 
@@ -85,12 +85,12 @@
                 <div class="colorDeFondo">
                     <p class="fondoTitulo" id="btnColorDeFondo">FONDO</p>
                     <div class="fondoBotones" id="btnsFondo">
-                        <div class="btnColorFondo" id="elegirColorFondo">
-                            <input type="color" class="fondoInput" id="colorFondoInput" value="#FFFFFF" aria-label="color de fondo de imagen">
+                        <div class="btnColorFondo color" id="elegirColorFondo">
+                            <input type="color" class="fondoInput color" id="colorFondoInput" value="#FFFFFF" aria-label="color de fondo de imagen">
                             <span class="spanFondo" >#FFFFFF</span>
                         </div>
                         <div class="modoSelector" id="eleccionDeModo">
-                            <select id="modoFondo" class="modoColorFondo" aria-label="modo de fondo de imagen">
+                            <select id="modoFondo" class="modoColorFondo color" aria-label="modo de fondo de imagen">
                                 <option value="unset" aria-label="opcion ninguno">Ninguno</option>
                                 <option value="lighten" aria-label="opcion aclarar">Aclarar</option>
                                 <option value="darken" aria-label="opcion oscurecer">Oscurecer</option>
@@ -163,7 +163,7 @@
                 <h2 class="panelTextTitulo">TEXTO</h2>
                 <div class="panelControlTexto">
                     <h3 class="panelControlTextTitulo">SUPERIOR</h3>
-                    <textarea aria-label="Texto Superior" class="textareaImput" id="textareaTopText" placeholder="TOP TEXT" rows="1"></textarea>
+                    <textarea aria-label="Texto Superior" class="textareaImput color" id="textareaTopText" placeholder="TOP TEXT" rows="1"></textarea>
                     
                     <div class="sinTexto">
                         <label for="cajaSinTopText" class="lebelCajaSelectora">
@@ -174,7 +174,7 @@
                 </div>  
                 <div class="panelControlTexto textoBottom">
                     <h3 class="panelControlTextTitulo">INFERIOR</h3>
-                    <textarea aria-label="Texto Inferior" class="textareaImput" id="textareaBottomText" placeholder="TOP BOTTOM" rows="1"></textarea>
+                    <textarea aria-label="Texto Inferior" class="textareaImput color" id="textareaBottomText" placeholder="TOP BOTTOM" rows="1"></textarea>
                     
                     <div class="sinTexto">
                         <label for="cajaSinBottomText" class="lebelCajaSelectora">
@@ -188,7 +188,7 @@
                 <div class="panelControlTextoFuente">
                                      <!--Tipo de fuente-->  
                     <h3 class="panelControlTextTitulo">FUENTE</h3>                      
-                    <select name="Tipo de fuente" id="tipoDeFuente" class="panelFuenteInput colorCambio" aria-label="Tipo de fuente">
+                    <select name="Tipo de fuente" id="tipoDeFuente" class="panelFuenteInput color" aria-label="Tipo de fuente">
                         <option value="Arial">Arial</option>
                         <option value="Arial Black">Arial Black</option>
                         <option value="American Typewriter">American Typewriter</option>
@@ -203,17 +203,17 @@
                                                <!--Tamaño-->
 
                     <div class="panelControlTextoTamaño">
-                        <input type="number" name="Tamaño de fuente" aria-label="Tamaño de fuente" class="controlTamañoInput colorCambio" id="tamanoInput" min="12" max="72" value="40" />
+                        <input type="number" name="Tamaño de fuente" aria-label="Tamaño de fuente" class="controlTamañoInput color" id="tamanoInput" min="12" max="72" value="40" />
                  
                                                 <!--Alineacion-->
                         <div class="panelAlineamiento">
-                            <button class="btnLado colorCambio" id="alineacionIzquierda"
+                            <button class="btnLado color" id="alineacionIzquierda"
                                 aria-label="Alinear texto a la izquierda"><i class="fas fa-align-left" aria-hidden="true"></i>
                             </button>
-                            <button class="btnLado colorCambio" id="alineacionCentro"
+                            <button class="btnLado color" id="alineacionCentro"
                                 aria-label="Alinear texto al centro"><i class="fas fa-align-center" aria-hidden="true"></i>
                             </button>
-                            <button class="btnLado colorCambio" id="alineacionDerecha"
+                            <button class="btnLado color" id="alineacionDerecha"
                                 aria-label="Alinear texto a la derecha"><i class="fas fa-align-right" aria-hidden="true"></i>
                             </button>
                         </div>
@@ -226,7 +226,7 @@
                         <div class="colorTextoContenedor">
                             <div class="divPanelTextoColor">
                                 <h3 class="panelControlTextTitulo">COLOR</h3>
-                                <div class="colorTexto" id="divPanelTextoColor">   
+                                <div class="colorTexto color" id="divPanelTextoColor">   
                                     <input name="Color de texto" type="color" class="fondoInput" id="textoColorInput"  value="#000000" aria-label="Color de texto" />
                                     <span class="spanTextoColor" aria-hidden="true">#000000</span>
                                 </div>
@@ -235,7 +235,7 @@
                             
                             <div class="divPanelTextoColor">
                                 <h3 class="panelControlTextTitulo">FONDO</h3>
-                                <div class="colorTexto"  id="divPanelTextoColorFondo">
+                                <div class="colorTexto color"  id="divPanelTextoColorFondo">
                                     <input name="Color de fondo del texto" type="color" class="fondoInput" id="backgroundColorInput" value="#FFFFFF" aria-label="Color de fondo del texto" />
                                     <span class="spanTextoColor" aria-hidden="true">#FFFFFF</span>
                                 </div>    
@@ -253,9 +253,9 @@
                     <div class="panelControlTexto">
                         <h3 class="panelControlTextTitulo">CONTORNO</h3>
                         <div class="btnsContorno">
-                            <button class="btnContorno" id="sinContorno">Ninguno</button>
-                            <button class="btnContorno" id="contornoClaro">Claro</button>
-                            <button class="btnContorno" id="contornoOscuro">Oscuro</button>
+                            <button class="btnContorno color" id="sinContorno">Ninguno</button>
+                            <button class="btnContorno color" id="contornoClaro">Claro</button>
+                            <button class="btnContorno color" id="contornoOscuro">Oscuro</button>
                         </div>
                     </div>   
 
@@ -263,7 +263,7 @@
 
                     <div class="panelControlTexto">
                         <h3 class="panelControlTextTitulo">ESPACIADO</h3>
-                        <input type="number" id="espacioInput" class="espacioInput" aria-label="Espaciado" min="10" max="50" value="35">
+                        <input type="number" id="espacioInput" class="espacioInput color" aria-label="Espaciado" min="10" max="50" value="35">
                     </div>
             
            
@@ -271,7 +271,7 @@
                
                     <div class="panelControlTexto">
                         <h3 class="panelControlTextTitulo">INTERLINEADO</h3>
-                        <select id="interlineadoInput" class="interlineadoInput" aria-label="Interlineado">
+                        <select id="interlineadoInput" class="interlineadoInput color" aria-label="Interlineado">
                             <option value="0.8">0.8</option>
                             <option value="1">1</option>
                             <option value="1.2" selected>1.2</option>
