@@ -85,7 +85,6 @@ body {
      ************************************************************************************************ */
 
 .mainContenedor {
-  background-color: #2d3443;
   height: 85vh;
   color: #e3f8e3;
   display: flex;
@@ -93,12 +92,13 @@ body {
   justify-content: center;
   align-items: center;
   padding: 3% 0%;
+  background-image: url(https://www.lanacion.com.py/resizer/yC8qgdDHVgY5OZtFG9yKVGvyHuA=/fit-in/1000x800/smart/cloudfront-us-east-1.images.arcpublishing.com/lanacionpy/OGUXKP7M5NFWBOHK3SVR44FBDM.jpg);
 }
 
 .memeContenedor {
   width: 35%;
   background-color: #191e2b;
-  margin: 2%;
+  margin: 0;
   height: 60.2vh;
   border: none;
   display: flex;

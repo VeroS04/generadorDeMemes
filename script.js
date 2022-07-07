@@ -379,18 +379,14 @@ interlineadoInput.addEventListener("change", () => {
 });
 
 
-const botonDescargar = document.getElementById("botonDescargar");
-// botonDescargar.addEventListener("click", () =>{
-//   var memeContenedor = document.getElementById("memeContenedor");
-//   html2canvas(memeContenedor).then(function (canvas) {	
-//     	var anchorTag = document.createElement("a");
-// 			document.body.appendChild(anchorTag);
-// 			anchorTag.download = "filename.jpg";
-// 			anchorTag.href = canvas.toDataURL();
-// 			anchorTag.target = '_blank';
-// 			anchorTag.click();
-// 		});
-// });
+//************* BOTÖN DE DESACARGA ********************** */
+
+const memeContenedor = document.getElementById('memeContenedor');
+const botonDescargar = document.getElementById('botonDescargar');
+botonDescargar.addEventListener('click', () => 
+domtoimage.toBlob(document.getElementById('memeContenedor')).then(blob => 
+saveAs(blob, 'memeContenedor.png')))
+
 
   // window.addEventListener('resize', () => {
   // if(window.innerWidth >= 1300){
