@@ -380,7 +380,6 @@ interlineadoInput.addEventListener("change", () => {
 
 
 //************* BOTÖN DE DESACARGA ********************** */
-
 const memeContenedor = document.getElementById('memeContenedor');
 const botonDescargar = document.getElementById('botonDescargar');
 botonDescargar.addEventListener('click', () => 
