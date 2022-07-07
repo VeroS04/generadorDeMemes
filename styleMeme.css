@@ -54,6 +54,7 @@ body {
   position: relative;
   cursor: pointer;
   transition: .1s ease all;
+  height: 5vh;
 }
 
 .botonImg {
@@ -103,7 +104,7 @@ body {
      ************************************************************************************************ */
 
 .mainContenedor {
-  height: 82vh;
+  height: 100vh;
   color: #e3f8e3;
   display: flex;
   flex-direction: column;
@@ -177,7 +178,7 @@ body {
   background-color: #272e3f;
   width: 16%;
   height: 100%;
-  position: absolute;
+  position: fixed;
   right: 00%;
   top: 00%;
   padding: 1%;
@@ -363,7 +364,7 @@ input[type='range']{
   font-size: 0.9em;
   background-color: #394052;
   color: #e3f8e3;
-  /* width: 100%; */
+  width: 100%;
   border: none;
   border-radius: 5px;
   margin-top: 5%;
@@ -465,7 +466,7 @@ input[type='range']{
   margin-top: 4%;
   border-radius: 5px;
   border: none;
-  
+  width: 30%;
 }
 
 .btnContornoSelected {
