@@ -168,9 +168,7 @@ body {
 .botonCerrar {
   margin-left: 90%;
   font-size: 1em;
-  width: 8%;
-  background-color: #272e3f;
-  color: #e3f8e3;
+  width: 10%;
   border: none;
   display: none;
 }
@@ -536,6 +534,8 @@ background-color: #464d5f;
 
   .botonCerrar {
     display: block;
+    background-color: #272e3f;
+    color: #e3f8e3;
   }
 
   .imagenPanel, .seccionPanelTexto{

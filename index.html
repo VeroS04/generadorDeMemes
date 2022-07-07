@@ -4,28 +4,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy" content="style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com">
+    <!-- <meta http-equiv="Content-Security-Policy" content="style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js" integrity="sha512-csNcFYJniKjJxRWRV1R7fvnXrycHP6qDR21mgz1ZP55xY5d+aHLfo9/FcGDQLfn2IfngbAHd8LdfsagcCqgTcQ==" crossorigin="anonymous"></script> 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js" integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA==" crossorigin="anonymous"></script>
-    <link rel="icon" href="imagenes/imagenmeme.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
     <link rel="stylesheet" href="styleMeme.css">
     <title>Generador de memes</title>
 </head>
+
 <body id="body">
     <!--
         ******************************************************************************************************************************
                                                         inicio de header
         ******************************************************************************************************************************
      -->
-   
+     <link rel="icon" href="imagenes/imagenmeme.png">
 
         <header id="header" class="headEstilo">
             <h1 class="headerTitulo">Generador de Memes</h1>
                 <div class="headerContenedorDeBotones">
                     <button class="buttonImg boton botonImg" id="btnImg" aria-label="boton al panel de imagen">
-                        <i class="fa-solid fa-image headerIcono"></i>Imagen</button>
+                        <i class="fa-solid fa-image"></i>Imagen</button>
                     <button class="buttonText boton botonTexto" id="btnText" aria-label="boton al panel de texto">
                         <i class="fa-solid fa-a headerIcono"></i>Texto</button>
                     <button class="botonModoOscuro boton" id="modoOscuro" aria-label="boton modo oscuro">
@@ -68,7 +68,7 @@
                                                 ****************************** -->
       
         <aside class="controlAside" id="aside">
-            <button class="botonCerrar" id="btnCerrar" name="boton cerrar"><i class="fa-solid fa-xmark"></i></button>
+            <button class="botonCerrar" id="btnCerrar" name="boton cerrar"><i class="fa-solid fa-rectangle-xmark"></i></button>
             <section  class="imagenPanel" id="panelImg" aria-label="panel de imagen">
 
                 <!--inicio url -->
