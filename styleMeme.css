@@ -182,6 +182,7 @@ body {
   right: 00%;
   top: 00%;
   padding: 1%;
+  overflow: auto;
 }
 
 .botonCerrar {
@@ -199,6 +200,7 @@ body {
 .imagenPanel {
   background-color: #272e3f;
   color: #e3f8e3;
+  overflow: auto;
 }
 
 .tituloPanelImagen {
@@ -346,6 +348,7 @@ input[type='range']{
 .seccionPanelTexto {
   background-color: #272e3f;
   color: #e3f8e3;
+  overflow: auto;
 }
 
 .panelTextTitulo {
