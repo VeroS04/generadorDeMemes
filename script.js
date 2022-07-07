@@ -388,8 +388,11 @@ domtoimage.toBlob(document.getElementById('memeContenedor')).then(blob =>
 saveAs(blob, 'memeContenedor.png')))
 
 
-  // window.addEventListener('resize', () => {
-  // if(window.innerWidth >= 1300){
-  // aside.style.display = 'block';
-  // }
-  // })
+  window.addEventListener('resize', () => {
+    if (window.innerWidth < 1300){
+    aside.style.display = 'none';
+  }
+  if(window.innerWidth >= 1300){
+  aside.style.display = 'block';
+  }
+  })

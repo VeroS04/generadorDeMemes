@@ -171,8 +171,7 @@ body {
   background-color: #272e3f;
   color: #e3f8e3;
   border: none;
-  background-color: transparent;
-  color: transparent;
+  display: none;
 }
 
 .imagenPanel {
@@ -508,6 +507,12 @@ background-color: #464d5f;
   background-color: #464d5f;
 }
 
+@media screen and (max-width: 1550px) and (min-width: 1299px){
+
+  .botonCerrar{
+    background-color: transparent;
+  }
+}
 
 @media screen and (max-width: 1300px) and (min-width: 700px){
 
@@ -529,8 +534,7 @@ background-color: #464d5f;
   }
 
   .botonCerrar {
-    background-color: #272e3f;
-    color: #e3f8e3;
+    display: block;
   }
 
   .imagenPanel, .seccionPanelTexto{
@@ -590,12 +594,7 @@ background-color: #464d5f;
   }
 
   .botonCerrar {
-    background-color: #272e3f;
-    color: #e3f8e3;
-  }
-
-  .imagenPanel, .seccionPanelTexto{
-    display: none;
+    display: block;
   }
 
   .botonDescargar{
