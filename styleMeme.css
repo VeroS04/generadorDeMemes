@@ -688,13 +688,14 @@ input[type='range']{
   .controlAside{
     width: 100%;
     height: auto;
-    padding: 10%;
+   padding: 10%;
     display: none;
   }
 
   .imagenPanel, .seccionPanelTexto{
     display: none;
     overflow: auto;
+    height: 100%;
   }
 
   .botonCerrar {
