@@ -363,7 +363,7 @@ input[type='range']{
   font-size: 0.9em;
   background-color: #394052;
   color: #e3f8e3;
-  width: 100%;
+  /* width: 100%; */
   border: none;
   border-radius: 5px;
   margin-top: 5%;
@@ -688,7 +688,7 @@ input[type='range']{
   .controlAside{
     width: 100%;
     height: auto;
-   padding: 10%;
+ 
     display: none;
   }
 

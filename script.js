@@ -235,6 +235,7 @@ textareaTopText.addEventListener("input", (event) => {
 });
 
 textareaBottomText.addEventListener("input", (event) => {
+  debugger
   const textoIngresado =  event.target.value;
   bottomText.innerHTML = textoIngresado;
 });
