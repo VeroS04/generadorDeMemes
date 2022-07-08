@@ -168,7 +168,7 @@ body {
   background-color: #272e3f;
   width: 16%;
   height: 100%;
-  position: fixed;
+  position: absolute;
   right: 00%;
   top: 00%;
   padding: 1%;
