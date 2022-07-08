@@ -94,13 +94,12 @@ body {
      ************************************************************************************************ */
 
 .mainContenedor {
-  height: 100vh;
   color: #e3f8e3;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 3% 0%;
+  padding: 5%;
   background-image: url(https://fondosmil.com/fondo/57415.jpg);
   
 }
@@ -167,7 +166,6 @@ body {
 .controlAside {
   background-color: #272e3f;
   width: 16%;
-  height: 100%;
   position: absolute;
   right: 00%;
   top: 00%;
@@ -188,7 +186,7 @@ body {
 
 
 .imagenPanel {
-  background-color: #272e3f;
+  background-color: transparent;
   color: #e3f8e3;
   overflow: auto;
 }
@@ -330,7 +328,7 @@ input[type='range']{
      ************************************************************************************************ */
 
 .seccionPanelTexto {
-  background-color: #272e3f;
+  background-color: transparent;
   color: #e3f8e3;
   overflow: auto;
 }
@@ -590,7 +588,7 @@ input[type='range']{
 @media screen and (max-width: 980px) and (min-width: 699px){
 
   .headerContenedorDeBotones {
-    width: 100%;
+    width: 70%;
     margin-top: 5%;
   }
 
