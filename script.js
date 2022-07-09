@@ -2,8 +2,7 @@ const header = document.getElementById("header");
 const main = document.getElementById("main");
 const imgMeme = document.getElementById("imgMeme");
 const memeContenido = document.getElementById("memeContenido");
-const asideImg = document.getElementById("asideImg");
-const asideTexto = document.getElementById("asideTexto");
+const aside = document.getElementById("aside");
 const panelImg = document.getElementById("panelImg");
 const panelText = document.getElementById("panelText");
 const btnOscuro = document.getElementById("modoOscuro");
@@ -47,10 +46,12 @@ btnOscuro.addEventListener("click", () => {
   btnOscuro.classList.add("oculto");
   header.classList.add('modoClaroHeader');
   header.classList.remove('modoOscuroHeader');
-  asideImg.classList.add('modoClaroAside');
-  asideImg.classList.remove('modoOScuroAside');
-  asideTexto.classList.add('modoClaroAside');
-  asideTexto.classList.remove('modoOScuroAside');
+  aside.classList.add('modoClaroAside');
+  aside.classList.remove('modoOScuroAside');
+  panelImg.classList.add('modoClaroAside');
+  panelImg.classList.remove('modoOScuroAside');
+  panelText.classList.add('modoClaroAside');
+  panelText.classList.remove('modoOScuroAside');
   btnImg.classList.add('modoClaroBoton');
   btnImg.classList.remove('modoOscuroBoton');
   btnText.classList.add('modoClaroBoton');
@@ -99,10 +100,12 @@ btnClaro.addEventListener("click", () => {
   btnOscuro.classList.remove("oculto");
   header.classList.add('modoOscuroHeader');
   header.classList.remove('modoClaroHeader');
-  asideImg.classList.remove('modoClaroAside');
-  asideImg.classList.add('modoOScuroAside');
-  asideTexto.classList.remove('modoClaroAside');
-  asideTexto.classList.add('modoOScuroAside');
+  aside.classList.remove('modoClaroAside');
+  aside.classList.add('modoOScuroAside');
+  panelImg.classList.remove('modoClaroAside');
+  panelImg.classList.add('modoOScuroAside');
+  panelText.classList.remove('modoClaroAside');
+  panelText.classList.add('modoOScuroAside');
   btnImg.classList.remove('modoClaroBoton');
   btnImg.classList.add('modoOscuroBoton');
   btnText.classList.remove('modoClaroBoton');
@@ -149,25 +152,28 @@ btnClaro.addEventListener("click", () => {
 //                                   ************************* OCULTAR/APARECER PANELES DE TEXTO E IMAGEN ************************
 
 btnImg.addEventListener("click", () => {
-  asideTexto.classList.add("oculto");
-  asideImg.classList.remove("oculto");
-  asideImg.style.display = 'block';
-  asideTexto.style.display = 'none';
+  panelText.classList.add("oculto");
+  panelImg.classList.remove("oculto");
+  panelImg.style.display = 'block';
+  aside.style.display = 'block';
+  panelText.style.display = 'none';
 });
 
 btnText.addEventListener("click", () => {
-  asideImg.classList.add("oculto");
-  asideTexto.classList.remove("oculto");
-  asideTexto.style.display = 'block';
-  asideImg.style.display = 'none';
+  panelImg.classList.add("oculto");
+  panelText.classList.remove("oculto");
+  panelText.style.display = 'block';
+  aside.style.display = 'block';
+  panelImg.style.display = 'none';
 });
 
 //                                     *************************************** PANEL IMAGEN ***************************************
 
 const btnCerrar = document.getElementById('btnCerrar');
 btnCerrar.addEventListener('click', () => {
-  asideImg.style.display = 'none';
-  asideTexto.style.display = 'none';
+  aside.style.display = 'none';
+  panelText.style.display = 'none';
+  panelImg.style.display = 'none';
 })
 
 

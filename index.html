@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <meta http-equiv="Content-Security-Policy" content="style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="styleMeme.css">
+    <link rel="icon" href="imagenes/imagenmeme.png">
     <title>Generador de memes</title>
 </head>
 
@@ -65,7 +65,7 @@
                                                   inicio seccion panel imagen
                                                 ****************************** -->
       
-        <aside class="controlAside" id="asideImg">
+        <aside class="controlAside" id="aside">
             <button class="botonCerrar" id="btnCerrar" name="boton cerrar"><i class="fa-solid fa-xmark"></i></button>
             <section  class="imagenPanel" id="panelImg" aria-label="panel de imagen">
 
@@ -142,7 +142,6 @@
                     </div>
                 </section>
                 <button class="reestablecerFiltros" id="btnReestablecerFiltros" aria-label="reestablecer filtros">Reestablecer filtros</button>
-            </aside>
                 
 
                                  <!--final filtros-->
@@ -158,9 +157,8 @@
                                      **************************** -->
 
                                            <!--TEXTO-->
-        <aside class="controlAside oculto" id="asideTexto">
-            <button class="botonCerrar" id="btnCerrar" name="boton cerrar"><i class="fa-solid fa-xmark"></i></button>
-            <section class= "panelTexto" id="panelTexto">
+
+            <section class= "panelTexto oculto" id="panelText">
                 <h2 class="panelTextTitulo">TEXTO</h2>
                 <div class="panelControlTexto">
                     <h3 class="panelControlTextTitulo">SUPERIOR</h3>

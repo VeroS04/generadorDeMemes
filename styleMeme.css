@@ -101,7 +101,7 @@ body {
   align-items: center;
   padding: 3%;
   background-image: url(https://fondosmil.com/fondo/57415.jpg);
-  height: 85vh;
+  height: 82vh;
 }
 
 .memeContenedor {
@@ -171,6 +171,7 @@ body {
   right: 0%;
   top: 0%;
   height: 100%;
+  padding: 1%;
 }
 
 
@@ -185,11 +186,7 @@ body {
   display: none;
 }
 
-.imagenPanel{
-  background-color: #272e3f;
-  height: auto;
-  padding: 1%;
-}
+
 
 
 .tituloPanelImagen {
@@ -323,13 +320,6 @@ input[type='range']{
 /* ************************************************************************************************
                                             INICIO PANEL TEXTO
      ************************************************************************************************ */
-
-.panelTexto{
-  background-color: #272e3f;
-  height: auto;
-  padding: 2%
-}
-
 
 .panelTextTitulo {
   text-align: center;
@@ -649,7 +639,7 @@ input[type='range']{
 
   .controlAside{
     width: 100%;
-    height: 100%;
+      height: 170vh;
     display: none;
     padding: 5%;
   }
