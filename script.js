@@ -2,7 +2,8 @@ const header = document.getElementById("header");
 const main = document.getElementById("main");
 const imgMeme = document.getElementById("imgMeme");
 const memeContenido = document.getElementById("memeContenido");
-const aside = document.getElementById("aside");
+const asideImg = document.getElementById("asideImg");
+const asideTexto = document.getElementById("asideTexto");
 const panelImg = document.getElementById("panelImg");
 const panelText = document.getElementById("panelText");
 const btnOscuro = document.getElementById("modoOscuro");
@@ -46,12 +47,10 @@ btnOscuro.addEventListener("click", () => {
   btnOscuro.classList.add("oculto");
   header.classList.add('modoClaroHeader');
   header.classList.remove('modoOscuroHeader');
-  aside.classList.add('modoClaroAside');
-  aside.classList.remove('modoOScuroAside');
-  panelImg.classList.add('modoClaroAside');
-  panelImg.classList.remove('modoOScuroAside');
-  panelText.classList.add('modoClaroAside');
-  panelText.classList.remove('modoOScuroAside');
+  asideImg.classList.add('modoClaroAside');
+  asideImg.classList.remove('modoOScuroAside');
+  asideTexto.classList.add('modoClaroAside');
+  asideTexto.classList.remove('modoOScuroAside');
   btnImg.classList.add('modoClaroBoton');
   btnImg.classList.remove('modoOscuroBoton');
   btnText.classList.add('modoClaroBoton');
@@ -100,12 +99,10 @@ btnClaro.addEventListener("click", () => {
   btnOscuro.classList.remove("oculto");
   header.classList.add('modoOscuroHeader');
   header.classList.remove('modoClaroHeader');
-  aside.classList.remove('modoClaroAside');
-  aside.classList.add('modoOScuroAside');
-  panelImg.classList.remove('modoClaroAside');
-  panelImg.classList.add('modoOScuroAside');
-  panelText.classList.remove('modoClaroAside');
-  panelText.classList.add('modoOScuroAside');
+  asideImg.classList.remove('modoClaroAside');
+  asideImg.classList.add('modoOScuroAside');
+  asideTexto.classList.remove('modoClaroAside');
+  asideTexto.classList.add('modoOScuroAside');
   btnImg.classList.remove('modoClaroBoton');
   btnImg.classList.add('modoOscuroBoton');
   btnText.classList.remove('modoClaroBoton');
@@ -152,26 +149,25 @@ btnClaro.addEventListener("click", () => {
 //                                   ************************* OCULTAR/APARECER PANELES DE TEXTO E IMAGEN ************************
 
 btnImg.addEventListener("click", () => {
-  panelImg.classList.remove("oculto");
-  panelText.classList.add("oculto");
-  panelImg.style.display = 'block';
-  panelText.style.display = 'none';
-  aside.style.display = 'block';
+  asideTexto.classList.add("oculto");
+  asideImg.classList.remove("oculto");
+  asideImg.style.display = 'block';
+  asideTexto.style.display = 'none';
 });
 
 btnText.addEventListener("click", () => {
-  panelText.classList.remove("oculto");
-  panelImg.classList.add("oculto");
-  panelText.style.display = 'block';
-  panelImg.style.display = 'none';
-  aside.style.display = 'block';
+  asideImg.classList.add("oculto");
+  asideTexto.classList.remove("oculto");
+  asideTexto.style.display = 'block';
+  asideImg.style.display = 'none';
 });
 
 //                                     *************************************** PANEL IMAGEN ***************************************
 
 const btnCerrar = document.getElementById('btnCerrar');
 btnCerrar.addEventListener('click', () => {
-aside.style.display = 'none';
+  asideImg.style.display = 'none';
+  asideTexto.style.display = 'none';
 })
 
 
@@ -235,7 +231,6 @@ textareaTopText.addEventListener("input", (event) => {
 });
 
 textareaBottomText.addEventListener("input", (event) => {
-  debugger
   const textoIngresado =  event.target.value;
   bottomText.innerHTML = textoIngresado;
 });
@@ -379,13 +374,15 @@ domtoimage.toBlob(document.getElementById('memeContenedor')).then(blob =>
 saveAs(blob, 'memeContenedor.png')))
 
 
-  window.addEventListener('resize', () => {
-    if (window.innerWidth < 1300){
-    aside.style.display = 'none';
-    btnCerrar.style.display ='block';
-  }
-  if(window.innerWidth >= 1300){
-  aside.style.display = 'block';
-  btnCerrar.style.display ='none';
-  }
-  })
+ // window.addEventListener('resize', () => {
+ //   if (window.innerWidth < 1300){
+   // asideImg.style.display = 'none';
+   // asideTexto.style.display = 'none';
+   // btnCerrar.style.display ='block';
+ // }
+ // if(window.innerWidth >= 1300){
+ // asideImg.style.display = 'block';
+//  asideTexto.style.display = 'block';
+ // btnCerrar.style.display ='none';
+ // }
+  //})
