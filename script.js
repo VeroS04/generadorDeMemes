@@ -151,11 +151,13 @@ btnClaro.addEventListener("click", () => {
 btnImg.addEventListener("click", () => {
   asideTexto.classList.add("oculto");
   asideImg.classList.remove("oculto");
+  asideImg.style.display = 'block';
 });
 
 btnText.addEventListener("click", () => {
   asideImg.classList.add("oculto");
   asideTexto.classList.remove("oculto");
+  asideTexto.style.display = 'block';
 });
 
 //                                     *************************************** PANEL IMAGEN ***************************************

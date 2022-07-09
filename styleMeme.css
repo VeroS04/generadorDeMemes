@@ -177,7 +177,7 @@ body {
   margin-left: 90%;
   font-size: 1em;
   width: 8%;
-  background-color: transparent;
+  background-color: #191e2b;
   color: #e3f8e3;
   border: none;
   border-radius: 0.3em;
@@ -560,11 +560,6 @@ input[type='range']{
    display: block;
   }
 
-  .imagenPanel, .seccionPanelTexto{
-    display: none;
-    overflow: auto;
-  }
-
   .botonDescargar{
     width: 16%;
   }
@@ -596,16 +591,11 @@ input[type='range']{
   .controlAside{
     width: 28%;
     display: none;
-    overflow: auto;
     height: 100%;
   }
+
   .botonCerrar {
     display: block;
-  }
-
-  .imagenPanel, .seccionPanelTexto{
-    display: none;
-    overflow: auto;
   }
 }
 
@@ -651,23 +641,17 @@ input[type='range']{
     padding: 5%;
   }
 
-  .imagenPanel, .seccionPanelTexto{
-    display: none;
-    overflow: auto;
-    height: 100%;
-  }
-
   .botonCerrar {
     display: block;
   }
 
-.panelInputImagen {
+  .panelInputImagen {
   padding: 8%;
-}
+  }
 
-.fondoInput{
+  .fondoInput{
   padding: 5%;
-}
+  }
 
   .btnContorno{
     width: 25%;
