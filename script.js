@@ -152,12 +152,14 @@ btnImg.addEventListener("click", () => {
   asideTexto.classList.add("oculto");
   asideImg.classList.remove("oculto");
   asideImg.style.display = 'block';
+  asideTexto.style.display = 'none';
 });
 
 btnText.addEventListener("click", () => {
   asideImg.classList.add("oculto");
   asideTexto.classList.remove("oculto");
   asideTexto.style.display = 'block';
+  asideImg.style.display = 'none';
 });
 
 //                                     *************************************** PANEL IMAGEN ***************************************
