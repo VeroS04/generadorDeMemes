@@ -99,9 +99,9 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 5%;
+  padding: 3%;
   background-image: url(https://fondosmil.com/fondo/57415.jpg);
-  
+  height: 100%;
 }
 
 .memeContenedor {
@@ -165,31 +165,25 @@ body {
 
 .controlAside {
   background-color: #272e3f;
+  color: #e3f8e3;
   width: 16%;
-  position: absolute;
-  right: 00%;
-  top: 00%;
+  position: fixed;
+  right: 0%;
+  top: 0%;
   padding: 1%;
-  overflow: auto;
 }
 
 .botonCerrar {
   margin-left: 90%;
   font-size: 1em;
   width: 8%;
-  background-color: #191e2b;
+  background-color: transparent;
   color: #e3f8e3;
   border: none;
   border-radius: 0.3em;
   display: none;
 }
 
-
-.imagenPanel {
-  background-color: transparent;
-  color: #e3f8e3;
-  overflow: auto;
-}
 
 .tituloPanelImagen {
   text-align: center;
@@ -310,13 +304,9 @@ input[type='range']{
   padding: 5%;
   background-color: #191e2b;
   color: #e3f8e3;
-  border: solid gray 0.5px;
+  border: none;
   border-radius: 5px;
   font: bold;
-  box-shadow: -2px 3px 1px 2px #dce4dc;
-  position: relative;
-  cursor: pointer;
-  transition: .1s ease all;
 }
 
 .reestablecerFiltros:hover{
@@ -327,11 +317,6 @@ input[type='range']{
                                             INICIO PANEL TEXTO
      ************************************************************************************************ */
 
-.seccionPanelTexto {
-  background-color: transparent;
-  color: #e3f8e3;
-  overflow: auto;
-}
 
 .panelTextTitulo {
   text-align: center;

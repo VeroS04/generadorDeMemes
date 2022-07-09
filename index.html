@@ -65,7 +65,7 @@
                                                   inicio seccion panel imagen
                                                 ****************************** -->
       
-        <aside class="controlAside" id="aside">
+        <aside class="controlAside" id="asideImg">
             <button class="botonCerrar" id="btnCerrar" name="boton cerrar"><i class="fa-solid fa-xmark"></i></button>
             <section  class="imagenPanel" id="panelImg" aria-label="panel de imagen">
 
@@ -141,12 +141,14 @@
                         <input id="inputNegativo" class="inputContrastes" name="negativo" type="range" min="0" max="1" step="0.1" value="0" aria-label="negativo">
                     </div>
                 </section>
-
                 <button class="reestablecerFiltros" id="btnReestablecerFiltros" aria-label="reestablecer filtros">Reestablecer filtros</button>
+            </aside>
+                
 
                                  <!--final filtros-->
 
-            </section>    
+            </section> 
+           
                                 <!-- *****************************
                                        final seccion panel imagen
                                      *****************************-->
@@ -156,8 +158,9 @@
                                      **************************** -->
 
                                            <!--TEXTO-->
+        <aside class="controlAside oculto" id="asideTexto">
 
-            <section class= "seccionPanelTexto oculto" id="panelText">
+            <section class= "seccionPanelTexto" id="panelTexto">
                 <h2 class="panelTextTitulo">TEXTO</h2>
                 <div class="panelControlTexto">
                     <h3 class="panelControlTextTitulo">SUPERIOR</h3>
@@ -281,6 +284,7 @@
                 </div>    
             </section>
         </aside>
+        
     </section>
 
     <script src="./script.js"></script>
