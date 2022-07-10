@@ -380,24 +380,6 @@ domtoimage.toBlob(document.getElementById('memeContenedor')).then(blob =>
 saveAs(blob, 'memeContenedor.png')))
 
 
-<<<<<<< HEAD
-
-
-//  window.addEventListener('resize', () => {
-//  if (window.innerWidth < 1300){
-//   panelImg.style.display = 'none';
-//    panelText.style.display = 'none';
-//    aside.style.display = 'none';
-//    btnCerrar.style.display ='block';
-//  }
-//  if(window.innerWidth >= 1300){
-//  panelImg.style.display = 'block';
-//  panelText.style.display = 'none';
-//  btnCerrar.style.display ='none';
-//  aside.style.display = 'block';
-//  }
-// })
-=======
   window.addEventListener('resize', () => {
     if (window.innerWidth < 1300){
     panelImg.style.display = 'none';
@@ -412,4 +394,3 @@ saveAs(blob, 'memeContenedor.png')))
     btnCerrar.style.display ='none';
   }
   })
->>>>>>> f3c4fbfed5f0d169582dd4887caabfc05e096c27
