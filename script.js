@@ -384,11 +384,13 @@ saveAs(blob, 'memeContenedor.png')))
     if (window.innerWidth < 1300){
     panelImg.style.display = 'none';
     panelText.style.display = 'none';
+    aside.style.display = 'none';
     btnCerrar.style.display ='block';
   }
   if(window.innerWidth >= 1300){
     panelImg.style.display = 'block';
     panelText.style.display = 'block';
-  btnCerrar.style.display ='none';
+    aside.style.display = 'block';
+    btnCerrar.style.display ='none';
   }
   })
